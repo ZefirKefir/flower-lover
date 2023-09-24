@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-black;
+}
+
+body.hide-scrollbar {
+  overflow-y: hidden;
+}
+
+@font-face {
+  font-family: 'Simpletune';
+  src: url('./fonts/Simpletune.otf');
+}
+
+.clip-10 {
+  overflow-clip-margin: 10px;
+}
+
+@layer utilities {
+  @variants responsive {
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      /* IE and Edge */
+      scrollbar-width: none;
+      /* Firefox */
+    }
+
+    /* custom */
+    .custom-scrollbar {
+      overflow-x: hidden;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+      @apply w-1
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+      @apply bg-teal/20 rounded-md
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      @apply bg-teal rounded-md
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      @apply bg-teal/80
+    }
+  }
+}
+
+.balance {
+  text-wrap: balance
+}
+
+.target {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.gradient_text {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
