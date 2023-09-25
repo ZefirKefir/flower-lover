@@ -57,7 +57,7 @@ const router = createBrowserRouter([
     path: '/faq',
     element: <FAQ />,
   },
-])
+], { basename: import.meta.env.DEV ? '/' : '/flowerlover/' })
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
