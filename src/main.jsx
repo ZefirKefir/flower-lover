@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from 'react-router-dom';
 
@@ -20,7 +20,7 @@ import AboutUs from './pages/AboutUs';
 import Contacts from './pages/Contacts';
 import FAQ from './pages/FAQ';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <App />,
@@ -57,7 +57,7 @@ const router = createBrowserRouter([
     path: '/faq',
     element: <FAQ />,
   },
-], { basename: '/lover' });
+]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
