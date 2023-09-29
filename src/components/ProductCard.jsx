@@ -12,6 +12,7 @@ import Modal from "./Modal";
 
 import data from "../constants/data";
 import { addToCart } from "../redux-toolkit/reducers/cartSlice";
+import priceDisplayer from "../functions/priceDisplayer";
 
 
 const ProductCard = ({ id, wide = false, style = {}, i = null }) => {
@@ -40,14 +41,10 @@ const ProductCard = ({ id, wide = false, style = {}, i = null }) => {
         <CardName onClick={() => dispatch(setProduct(id))} to={'/catalog/product'}>{name}</CardName>
         <CardPrice>
           <SalePrice>
-            {price.toString().length < 4 ? price + ' ₽' : (
-              `${price.toString().slice(0, -3)}.${price.toString().slice(-3)} ₽`
-            )}
+            {priceDisplayer(price, 1)}
           </SalePrice>
           <ActualPrice>
-            {actualPrice ? actualPrice.toString().length < 4 ? actualPrice + ' ₽' : (
-              `${actualPrice.toString().slice(0, -3)}.${actualPrice.toString().slice(-3)} ₽`
-            ) : ''}
+            {actualPrice ? priceDisplayer(actualPrice, 1) : ''}
           </ActualPrice>
         </CardPrice>
         {/* <div className="absolute flex items-center justify-center p-2 font-bold leading-normal -translate-x-1/2 -translate-y-1/2 bg-gray-900 rounded-full w-14 top-1/3 left-1/2 aspect-square font-cormorant font-3xl text-sky-200 ">{pop}</div> */}

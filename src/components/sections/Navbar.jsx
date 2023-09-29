@@ -97,7 +97,7 @@ const Navbar = ({ landing = false, logoLanding = false }) => {
                     По данному запросу ничего не найдено.<br />
                     Попробуйте еще раз или перейдите в каталог
                   </ResultsText>
-                  <CatalogLink to='/catalog'>В каталог</CatalogLink>
+                  <CatalogLink onClick={unfocus} to='/catalog'>В каталог</CatalogLink>
                 </>
               ) : ''}
             </div>
@@ -130,7 +130,7 @@ const Navbar = ({ landing = false, logoLanding = false }) => {
                     По данному запросу ничего не найдено.<br />
                     Попробуйте еще раз или перейдите в каталог
                   </ResultsText>
-                  <CatalogLink to='/catalog'>В каталог</CatalogLink>
+                  <CatalogLink onClick={unfocus} to='/catalog'>В каталог</CatalogLink>
                 </>
               ) : ''}
             </div>

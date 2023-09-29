@@ -5,6 +5,7 @@ import { setProduct } from "../../redux-toolkit/reducers/filterSlice";
 import { addToCart, removeAllOfSort, removeFromCart } from "../../redux-toolkit/reducers/cartSlice";
 import { useDispatch } from "react-redux";
 import { useInView } from "react-intersection-observer";
+import priceDisplayer from "../../functions/priceDisplayer";
 
 const CartItem = ({ className = '', style = {}, id, appearing = true, amount, additional, externalInView = false }) => {
   const { ref, inView } = useInView({
@@ -65,7 +66,9 @@ const CartItem = ({ className = '', style = {}, id, appearing = true, amount, ad
               : ''}
           </ItemAdditional>
         </div>
-        <ItemPrice>{product.price.toString().slice(0, -3) + ',' + product.price.toString().slice(-3)}.00 ₽</ItemPrice>
+        <ItemPrice>
+          {priceDisplayer(product.price)}
+        </ItemPrice>
         <p className="text-white">{additional}</p>
         <AmountButton className="group">
           <span onClick={() => dispatch(removeFromCart(additional.length !== 0 ? product.id + `/${additional.join('/')}` : product.id))} className="px-1.5 cursor-pointer duration-200 -translate-y-px hover:text-[#888]">–</span>

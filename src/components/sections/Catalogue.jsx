@@ -18,6 +18,8 @@ import images from "../../constants/images";
 import { addToList, clearList } from "../../redux-toolkit/reducers/listSlice";
 import Radio from "../Radio";
 import { useInView } from "react-intersection-observer";
+import SelectedItem from "../SelectedItem";
+import NoRes from "../NoRes";
 
 const idList = ['FMAA1S', 'BQZ9W8', 'Y1JB95', 'HFVARV', 'T13DST', '063NYB', 'P2YRDJ', 'KIMC7C', 'X65GJL', 'FW72RE', 'GUEHRY', 'CMD3M2', '1K7JAC', 'UDKGTR', '7M3XV3', 'EP3V1I', 'EZ0M04', 'A2OVVU', 'XDIN8H', 'HSUWQ8', 'ID2QR5', 'PS20OX', 'FFX3CW', '9VBO6O', 'WS4T8X', '596EQ0', '56DTQA', 'BY2GLE', '0WXWZP', 'TYASS3', 'WYSAUF', 'D1T71U', '4BZZQQ', '9FN7L6', 'NZ8ZYT', '64K8GK', 'HP12HI', 'O5RCN9', 'ERXPB8', '87B0V0', 'L4U579', '4L5QFC', '4JC6FM', 'AA1SBQ', 'Z9W8Y1', 'JB95HF', 'VARVT1', '3DST06', '3NYBP2', 'YRDJKI', 'MC7CX6', '5GJLFW', '72REGU', 'EHRYCM'];
 
@@ -52,6 +54,10 @@ const Catalogue = () => {
   });
   const { ref: backRef, inView: backInView } = useInView({
     threshold: .25,
+    triggerOnce: true,
+  });
+  const { ref: noResultsRef, inView: noResultsInView } = useInView({
+    threshold: .4,
     triggerOnce: true,
   });
 
@@ -127,6 +133,18 @@ const Catalogue = () => {
     });
   }
 
+  const removeCat = (name) => {
+    const found = document.querySelector('.selected').querySelector(`button[datatype*=${name}]`);
+
+
+    found.classList.remove('opacity-100');
+    found.classList.add('opacity-0');
+    found.classList.add('-translate-y-4')
+
+    setTimeout(() => {
+      dispatch(removeCategory(name));
+    }, 150)
+  }
 
   return (
     <Section>
@@ -156,15 +174,15 @@ const Catalogue = () => {
             {data.categories.map((item, index) => (
               <Category key={index}
                 className={`
-                  ${categories.includes(item.name) ? 'bg-teal text-black' : 'text-white border-[0.5px] border-white'}
-                  duration-300 ease-in-out ${catInView ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0 delay-0'}
+                  ${categories.includes(item.name) ? 'bg-teal text-black delay-0' : 'text-white border-[0.5px] border-white delay-0'}
+                  duration-300 ease-in-out ${catInView ? `translate-x-0 opacity-100}` : `translate-x-4 opacity-0`}
                 `}
-                style={{ transitionDelay: catInView ? `${index * 50}ms` : '0ms' }}
-                onClick={() => categories.includes(item.name) ? dispatch(removeCategory(item.name)) : dispatch(addCategory(item.name))}
+                onClick={() => categories.includes(item.name) ? removeCat(item.name) : dispatch(addCategory(item.name))}
               >
                 {item.displayName}
               </Category>
-            ))}
+            )
+            )}
           </Categories>
         </TitleBlock>
         <MainBlock className='main_block'>
@@ -265,7 +283,7 @@ const Catalogue = () => {
               {data.categories.map((item, index) => (
                 <Category key={index}
                   className={categories.includes(item.name) ? 'bg-teal text-black' : 'text-white border-[0.5px] border-white'}
-                  onClick={() => categories.includes(item.name) ? dispatch(removeCategory(item.name)) : dispatch(addCategory(item.name))}
+                  onClick={() => categories.includes(item.name) ? removeCat(item.name) : dispatch(addCategory(item.name))}
                 >
                   {item.displayName}
                 </Category>
@@ -335,9 +353,9 @@ const Catalogue = () => {
           </Filters>
           <Main>
             <PreProductUI>
-              <Selected>
-                {data.categories.map(item => categories.includes(item.name) ? (
-                  <SelectedItem onClick={() => dispatch(removeCategory(item.name))}>
+              <Selected className="selected">
+                {data.categories.map((item, idx) => categories.includes(item.name) ? (
+                  <SelectedItem datatype={item.name} idx={idx} onClick={() => removeCat(item.name)}>
                     {item.displayName}
                     <IoCloseOutline size={14} />
                   </SelectedItem>
@@ -370,11 +388,7 @@ const Catalogue = () => {
               </Sort>
             </PreProductUI>
             {list.length === 0 ?
-              <div className="bg-[#000]/30 py-4 pb-6 px-6 rounded-md backdrop-blur-[10px] w-4/5 mx-auto mt-8 text-xl font-normal text-center leading-normal tracking-[0.04em] text-white font-oswald">
-                <span className="uppercase">Не найдено товаров по выбранным вами фильтрам :(</span>
-                <span className="block mt-2 text-sm font-light ">Попробуйте поискать что-то другое и будьте терпеливы.</span>
-                <span className="block text-sm font-light ">Мы регулярно вносим изменения в наш ассортимент) (нет)</span>
-              </div> : (
+              <NoRes /> : (
 
                 <Products className="text-xl text-sky-300">
                   {list.map((id, i) => productsList.map(item => id === item.id ? (
@@ -475,15 +489,9 @@ const PreProductUI = tw.div`
 const Selected = tw.div`
   flex flex-wrap gap-6
 `;
-const SelectedItem = tw.button`
-  flex items-center gap-1
-  font-oswald font-bold
-  text-sm leading-normal tracking-[0.04em]
-  uppercase
-  text-teal
-`;
 const Sort = tw.div`
   relative w-[30%]
+  z-10
 `;
 const SortByButton = tw.button`
   w-full rounded-[10px]

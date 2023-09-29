@@ -19,6 +19,7 @@ import CartItem from "../components/sections/CartItem"
 
 import data from "../constants/data"
 import images from "../constants/images"
+import priceDisplayer from "../functions/priceDisplayer"
 
 
 const Checkout = () => {
@@ -192,7 +193,9 @@ const Checkout = () => {
                 </Promo>
                 <Sum className="flex justify-between gap-12">
                   <span>Общая сумма заказа</span>
-                  <span>{sum !== 0 ? sum.toString().slice(0, -3) + ',' + sum.toString().slice(-3) : 0}.00{'\u00a0'}₽</span>
+                  <span>
+                    {priceDisplayer(sum)}
+                  </span>
                 </Sum>
                 <SectionText className={textInView ? 'translate-x-0 opacity-100' : 'translate-x-6 opacity-0'}>Скидка = 0 ₽</SectionText>
                 <SectionText className={textInView ? 'delay-200 translate-x-0 opacity-100' : 'translate-x-6 opacity-0'} ref={textRef}>Доставка = 0 ₽</SectionText>
@@ -217,7 +220,8 @@ const Checkout = () => {
                 ))}
               </div>
               <SectionTitleSm className='mt-5'>
-                Предварительный итог: {sum !== 0 ? sum.toString().slice(0, -3) + ',' + sum.toString().slice(-3) : 0}.00 руб.
+                Предварительный итог: {' '}
+                {priceDisplayer(sum)}
               </SectionTitleSm>
             </Right>
           </Content>
