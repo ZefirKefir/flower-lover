@@ -58,7 +58,7 @@ const Arrow = tw.button`
 const LeftLongArrow = tw(Arrow)`
   w-[80px] after:w-full
   ml-1.5 mr-5
-  before:border-t-[3px] before:border-t-transparent
+  before:border-l-[3px] before:border-l-transparent
   before:border-r-[6px] before:border-r-teal
   before:border-b-[3px] before:border-b-transparent
   before:left-0 before:top-1/2
