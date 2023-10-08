@@ -9,3 +9,5 @@ twin.macro, React Icons, hooks etc.
 
 Unfortunately the site is in Russian language which can seem bad for certain people, I wanted to keep the design the same as it was with the same fonts which were specially chosen because of their responsibleness with Cyrillic symbols, so just translate it to English with your browser tools if you need to.
 Hope you'll like it! :)
+
+Demo: https://zefirkefir.github.io/flower-lover/
