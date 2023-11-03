@@ -50,7 +50,9 @@ const ProductCard = ({ id, wide = false, style = {}, i = null }) => {
         {/* <div className="absolute flex items-center justify-center p-2 font-bold leading-normal -translate-x-1/2 -translate-y-1/2 bg-gray-900 rounded-full w-14 top-1/3 left-1/2 aspect-square font-cormorant font-3xl text-sky-200 ">{pop}</div> */}
         <ButtonOutlined pX='4.75rem' wide={wide}
           onClick={() => dispatch(addToCart(id))}
-        >В корзину</ButtonOutlined>
+        >
+          Add to basket
+        </ButtonOutlined>
       </Card>
     </>
   )

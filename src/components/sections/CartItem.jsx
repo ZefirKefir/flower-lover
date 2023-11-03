@@ -36,32 +36,32 @@ const CartItem = ({ className = '', style = {}, id, appearing = true, amount, ad
           <ItemAdditional>
             {additional.includes('fertilizer') ?
               <>
-                <p>+ Удобрения</p>
-                <p className="font-bold text-teal tracking-[0.1em]">{data.additional[0].price}.00 ₽</p>
+                <p>+ {data.additional[0].title}</p>
+                <p className="font-medium text-teal tracking-[0.1em]">{data.additional[0].price}.00 ₽</p>
               </>
               : ''}
           </ItemAdditional>
           <ItemAdditional>
             {additional.includes('signature') ?
               <>
-                <p>+ Подпись открытки</p>
-                <p className="font-bold text-teal tracking-[0.1em]">{data.additional[1].price}.00 ₽</p>
+                <p>+ {data.additional[1].title}</p>
+                <p className="font-medium text-teal tracking-[0.1em]">{data.additional[1].price}.00 ₽</p>
               </>
               : ''}
           </ItemAdditional>
           <ItemAdditional>
             {additional.includes('photo') ?
               <>
-                <p>+ Фото перед отправкой</p>
-                <p className="font-bold text-teal tracking-[0.1em]">{data.additional[2].price}.00 ₽</p>
+                <p>+ {data.additional[2].title}</p>
+                <p className="font-medium text-teal tracking-[0.1em]">{data.additional[2].price}.00 ₽</p>
               </>
               : ''}
           </ItemAdditional>
           <ItemAdditional>
             {additional.includes('surprise') ?
               <>
-                <p>+ Букет-сюрприз</p>
-                <p className="font-bold text-teal tracking-[0.1em]">{data.additional[3].price}.00 ₽</p>
+                <p>+ {data.additional[3].title}</p>
+                <p className="font-medium text-teal tracking-[0.1em]">{data.additional[3].price}.00 ₽</p>
               </>
               : ''}
           </ItemAdditional>
@@ -69,13 +69,13 @@ const CartItem = ({ className = '', style = {}, id, appearing = true, amount, ad
         <ItemPrice>
           {priceDisplayer(product.price)}
         </ItemPrice>
-        <p className="text-white">{additional}</p>
+        {/* <p className="text-white">{additional}</p> */}
         <AmountButton className="group">
           <span onClick={() => dispatch(removeFromCart(additional.length !== 0 ? product.id + `/${additional.join('/')}` : product.id))} className="px-1.5 cursor-pointer duration-200 -translate-y-px hover:text-[#888]">–</span>
           <span className="duration-200">{amount}</span>
           <span onClick={() => dispatch(addToCart(additional.length !== 0 ? product.id + `/${additional.join('/')}` : product.id))} className="px-1.5 cursor-pointer duration-200 hover:text-[#888]">+</span>
         </AmountButton>
-        <RemoveButton onClick={() => dispatch(removeAllOfSort(additional.length !== 0 ? product.id + `/${additional.join('/')}` : product.id))}>Удалить</RemoveButton>
+        <RemoveButton onClick={() => dispatch(removeAllOfSort(additional.length !== 0 ? product.id + `/${additional.join('/')}` : product.id))}>remove</RemoveButton>
       </ItemDetails>
     </Item>
   )

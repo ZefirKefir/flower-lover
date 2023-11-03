@@ -41,22 +41,22 @@ const AnyQuestions = () => {
       <Container>
         <Flex>
           <SectionTitle>
-            остались
-            <span className="block md:ml-24">вопросы?</span>
+            remained
+            <span className="block md:ml-12">questions?</span>
           </SectionTitle>
           <Content ref={ref}>
             <Line className={inView ? 'scale-x-100' : 'scale-x-[.1]'} />
             <FormText className={inView ? 'delay-100 translate-x-0 opacity-100' : 'translate-x-12 opacity-0'}>
-              Отправьте ваш вопрос, заказ, предложение или жалобу через форму обратной связи, и наш специалист свяжется с вами в течение 15 минут.
+              Submit your question, order, suggestion or complaint via the feedback form and our specialist will contact you within 15 minutes.
             </FormText>
             <Form action="#">
-              <LandingInput parentClassName={inView ? 'delay-[.25s] translate-x-0 opacity-100' : 'translate-x-10 opacity-0'} type='text' id='name' name='name' label='Ваше имя' />
-              <LandingInput parentClassName={inView ? 'delay-[.4s] translate-x-0 opacity-100' : 'translate-x-10 opacity-0'} type='tel' id='phone' name='phone' label='Ваш номер' numeric />
-              <LandingInput parentClassName={inView ? 'delay-[.55s] translate-x-0 opacity-100' : 'translate-x-10 opacity-0'} type='textarea' id='commentary' name='commentary' label='Ваш комментарий' />
-              <ButtonPrimary noInView className={`self-start mt-2.5 ${inView ? 'delay-[.7s] translate-x-0 opacity-100' : 'translate-x-6 opacity-0'}`} pX='92px'>отправить</ButtonPrimary>
+              <LandingInput parentClassName={inView ? 'delay-[.25s] translate-x-0 opacity-100' : 'translate-x-10 opacity-0'} type='text' id='name' name='name' label='Your name' />
+              <LandingInput parentClassName={inView ? 'delay-[.4s] translate-x-0 opacity-100' : 'translate-x-10 opacity-0'} type='tel' id='phone' name='phone' label='Your number' numeric />
+              <LandingInput parentClassName={inView ? 'delay-[.55s] translate-x-0 opacity-100' : 'translate-x-10 opacity-0'} type='textarea' id='commentary' name='commentary' label='Your commentary' />
+              <ButtonPrimary noInView className={`self-start mt-2.5 ${inView ? 'delay-[.7s] translate-x-0 opacity-100' : 'translate-x-6 opacity-0'}`} pX='100px'>submit</ButtonPrimary>
               <FormDescr className={inView ? 'delay-[.8s] translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}>
-                Нажимая  на кнопку «Отправить», я даю свое согласие на обработку персональных данных, в соответствии с
-                {' '}<a href="#" className="font-normal text-pink-300 underline">Политикой&nbsp;конфиденциальности</a>
+                By submitting the form, I consent to the processing of personal data in accordance with the
+                {' '}<a href="#" className="font-normal text-pink-300 underline">Privacy&nbsp;Policy</a>.
               </FormDescr>
             </Form>
           </Content>
@@ -118,13 +118,13 @@ const Content = tw.div`
   flex flex-col items-start lg:items-end
 `;
 const Line = tw.span`
-  w-1/3 md:w-[60%] h-px
+  w-1/3 md:w-[60%] lg:w-3/4 h-px
   mt-[3.75em] mb-5 lg:mb-[3.25em]
   bg-teal
   duration-500 ease-in-out origin-right
 `;
 const FormText = tw.p`
-  sm:w-[55%] lg:w-[70%] xl:w-[55%]
+  sm:w-[55%] lg:w-[70%]
   mb-[1.875rem] md:mb-16
   font-oswald font-medium
   text-sm tracking-[0.04em]

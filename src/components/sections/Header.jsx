@@ -54,9 +54,11 @@ const Header = ({ children }) => {
           <MobileLogo className={`z-0 top-16 duration-500 ease0-in-out ${mobInView ? '-translate-x-1/2 opacity-100' : '-translate-x-[80%] opacity-0'}`}>Flower</MobileLogo>
         </div>
         <HeaderSubtitle ref={textRef} className={`duration-300 ease-out ${textInView ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'}`}>
-          Создаём для тех, кто ценит свежесть и изящество цветка
+          We create for those who appreciate the freshness and grace of flowers
         </HeaderSubtitle>
-        <ButtonLinkPrimary className={`duration-300 ease-out ${buttonInView ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'}`} ref={buttonRef} to='/catalog'>смотреть каталог</ButtonLinkPrimary>
+        <ButtonLinkPrimary className={`duration-300 ease-out ${buttonInView ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'}`} ref={buttonRef} to='/catalog'>
+          View catalog
+        </ButtonLinkPrimary>
         <Layer className="hidden lg:block" />
         <Sign className='hidden lg:block absolute bottom-0 right-[12.5%]' />
       </Header3>

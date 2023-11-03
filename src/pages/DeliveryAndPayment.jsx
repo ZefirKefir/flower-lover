@@ -58,78 +58,81 @@ const DeliveryAndPayment = () => {
             ${back3InView ? 'translate-x-0 opacity-100' : 'translate-x-12 opacity-0'}
           `} />
         <Container>
-          <Path path='/delment' pathName="Доставка и оплата" />
+          <Path path='/delment' pathName="Delivery & Payment" />
           <SectionTitleCustom className="mt-5 md:mt-[3.75rem]">
-            доставка
-            <span className="block ml-[1em]">и оплата</span>
+            Delivery
+            <span className="block ml-[1em]">& payment</span>
           </SectionTitleCustom>
           <Exclamation>
             <ExclamMark className={back1InView ? 'delay-100 -translate-y-6 md:translate-y-0 opacity-100' : '-translate-y-14 md:-translate-y-8 opacity-0'}>!</ExclamMark>
             <div>
-              <ExclamTitle className='mb-2.5'>Дорогие клиенты!</ExclamTitle>
-              <Descr>Во время пандемии (COVID-19) компания Lover Flower призывает всех меньше контактировать с другими людьми для защиты себя и своих близких. Именно поэтому мы организовали <span className='text-teal'>БЕСКОНТАКТНУЮ ДОСТАВКУ</span></Descr>
+              <ExclamTitle className='mb-2.5'>Dear clients!</ExclamTitle>
+              <Descr>
+                During the pandemic (COVID-19), Lover Flower encourages everyone to have less contact with others to protect themselves and their loved ones. That's why we organized  <span className="text-teal">contactless delivery</span>.
+              </Descr>
+
             </div>
           </Exclamation>
-          <SectionSubtitleCustom className='text-center lg:text-left'>Способы оплаты:</SectionSubtitleCustom>
+          <SectionSubtitleCustom className='text-center lg:text-left'>Patyment methods:</SectionSubtitleCustom>
           <GridX4 className="mt-5 mb-[3.75em] md:mb-[6.25em]">
             <>
               <GridBefore />
-              <GridText>БАНКОВСКОЙ КАРТОЙ ПРИ ОФОРМЛЕНИИ ЗАКАЗА ЧЕРЕЗ САЙТ или по ссылке</GridText>
+              <GridText>BY a BANK CARD WHEN PLACING AN ORDER THROUGH THE SITE or via the link</GridText>
             </>
             <>
               <GridBefore />
-              <GridText>НАЛИЧНЫМИ,  БАНКОВСКОЙ КАРТОЙ ПРИ САМОВЫВОЗЕ или с расчетного счета орагнизации</GridText>
+              <GridText>IN CASH, BY BANK CARD AT PICKUP OR from the organization’s current account</GridText>
             </>
             <>
               <GridBefore />
-              <GridText>НАЛИЧНЫМИ ПРИ{'\u00a0'}ДОСТАВКЕ КУРЬЕРОМ</GridText>
+              <GridText>By cash by courier delivery</GridText>
             </>
             <>
               <GridBefore />
-              <GridText>КРИПТОВАЛЮТОЙ</GridText>
+              <GridText>with cryptocurrency</GridText>
             </>
           </GridX4>
           <div className="lg:ml-28">
-            <SectionSubtitleCustom>стоимость доставки:</SectionSubtitleCustom>
+            <SectionSubtitleCustom>Delivery cost:</SectionSubtitleCustom>
             <List className="lg:-ml-8">
               <ListItem className="mb-2.5 last:mb-0">
-                <span className="font-bold">Бесплатно</span> – при заказе на сумму от <span className="text-teal">90 рублей</span>
+                <span className="font-bold">Free</span> – for orders <span className="text-teal">above 1900 RUB</span>
               </ListItem>
               <ListItem className="mb-2.5 last:mb-0">
-                <span className='font-bold'>10 рублей</span> – при заказе на сумму <span className="text-teal">менее 90 рублей</span></ListItem>
-              <ListItem className="mb-2.5 last:mb-0">Так же вы можете забрать ваш заказ самостоятельно по адресу:<br />
-                <span className="text-teal">г. Минск, ул. Тимирязева д. 67, комн. 112 ежедневно с 10.00 до 21.00</span></ListItem>
+                <span className='font-bold'>500 RUB</span> – for orders <span className="text-teal">lower than 1900 RUB</span></ListItem>
+              <ListItem className="mb-2.5 last:mb-0">You can also pick up your order yourself under the address:<br />
+                <span className="text-teal">Minsk, Timiryazeva St., Apt. 67, room. 112 everyday from 10.00 to 21.00</span></ListItem>
             </List>
           </div>
-          <SectionSubtitleCustom>Условия доставки:</SectionSubtitleCustom>
+          <SectionSubtitleCustom>Delivery terms:</SectionSubtitleCustom>
           <List>
-            <ListItem className="mb-2.5 last:mb-0">Доставка осуществляется по городу Минску в пределах МКАД <span className="text-teal">в любой день</span></ListItem>
-            <ListItem className="mb-2.5 last:mb-0 max-w-[42em]">Возможность, сроки и стоимость доставки за пределы МКАД, доставки в ночное время, праздники оговариваются с менеджером</ListItem>
+            <ListItem className="mb-2.5 last:mb-0">Delivery is carried out in the city of Minsk within the Moscow Ring Road <span className="text-teal">on any day</span>.</ListItem>
+            <ListItem className="mb-2.5 last:mb-0 max-w-[42em]">The possibility, timing and cost of delivery outside the Moscow Ring Road, delivery at night, holidays are discussed with the manager.</ListItem>
           </List>
           {/* className="md:w-4/5" */}
           <BlurBlock className="md:w-[86.6%]">
-            <SectionSubtitleCustom className='mb-1.5 md:mb-5'>Дополнительно:</SectionSubtitleCustom>
-            <SectionText>Доставка иному лицу возможна только в случае оплаты заказа заказчиком. Доставка осуществляется не ранее
-              чем через 2 часа после оплаты заказа, но может быть ранее, если букет есть в наличии либо по договорённости
-              с менеджером.</SectionText>
-            <SectionText>Время ожидания курьера составляет 15 минут.</SectionText>
-            <SectionText>В случае если на момент доставки цветов получателя нет либо нет возможности по иным причинам произвести доставку (указан неточный адрес, закрытая входная дверь, контрольно-пропускная система и др.), мы оставляем за собой право по собственному выбору:</SectionText>
+            <SectionSubtitleCustom className='mb-1.5 md:mb-5'>Additionally:</SectionSubtitleCustom>
+            <SectionText>
+              Delivery to another person is possible only if the customer pays for the order. Delivery is carried out no earlier than 2 hours after payment for the order, but may be earlier if the bouquet is in stock or by agreement with the manager.
+            </SectionText>
+            <SectionText>The waiting time for the courier is 15 minutes.</SectionText>
+            <SectionText>If at the time of delivery of flowers the recipient is not available or for other reasons it is not possible to make delivery (inaccurate address indicated, closed front door, access control system, etc.), we reserve the right, at our own choice:</SectionText>
             <ul className="mb-[1.875em]">
-              <LowercaseListItem>оставить цветы тому, кто открыл дверь;</LowercaseListItem>
-              <LowercaseListItem>с заказчиком согласовать повторную доставку, которая дополнительно оплачивается;</LowercaseListItem>
-              <LowercaseListItem>отказаться от передачи цветов без возврата денежных средств.</LowercaseListItem>
+              <LowercaseListItem>leave flowers for the person who answered the door;</LowercaseListItem>
+              <LowercaseListItem>agree with the customer on re-delivery, which will be paid additionally;</LowercaseListItem>
+              <LowercaseListItem>refuse to send flowers without a refund.</LowercaseListItem>
             </ul>
             <SectionText className='mb-[1.875em]'>
-              Если вы либо иной получатель не получили заказ, вам необходимо сообщить об этом менеджеру по телефону<br />
+              If you or another recipient has not received the order, you need to inform the manager about this by phone<br />
               <span className="text-teal">+375 29 113 69 69</span>.
             </SectionText>
-            <SectionSubtitleCustom className='mb-2.5 md:mb-5'>Возврат денег:</SectionSubtitleCustom>
+            <SectionSubtitleCustom className='mb-2.5 md:mb-5'>Refund:</SectionSubtitleCustom>
             <SectionText>
-              При отказе заказчика от заказа в течение двух часов, если заказ ещё не начал готовиться, средства возвращаются в полном объёме. Если же флорист начал подготовку, то заказчик имеет право на возврат 50% стоимости, либо, если ещё не был оплачен, то обязан оплатить 50%.
+              If the customer cancels the order within two hours, if the order has not yet begun to be prepared, the funds will be returned in full. If the florist has begun preparations, then the customer has the right to a refund of 50% of the cost, or, if it has not yet been paid, then he is obliged to pay 50%.
             </SectionText>
             <SectionText className='mt-[1em]'>
-              Цветы надлежащего качества возврату и обмену не подлежат, а если имеются какие-либо недостатки в цветах – возврат производится лишь если эти недостатки не являются природными и естественными изъянами растения.
-              Возврат денежных средств производится незамедлительно на тот счёт, с которого произошла оплата, их же поступление на счёт зависит от платёжной системы.
+              Flowers of proper quality cannot be returned or exchanged, and if there are any defects in the flowers, returns are made only if these defects are not natural defects of the plant.
+              Refunds are made immediately to the account from which the payment was made; their receipt in the account depends on the payment system.
             </SectionText>
             <Sign className='absolute -bottom-[5.25rem] md:-bottom-36 left-6 md:left-20 text-[#6B535F] rotate-[-14.17deg]' />
           </BlurBlock>

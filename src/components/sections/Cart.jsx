@@ -81,9 +81,10 @@ const Cart = ({ ref, visible = false, setVisible = () => console.log('') }) => {
       <Content className={visible ? 'translate-x-0' : 'translate-x-full'}>
         <div className='absolute -z-10 rounded-full blur-[125px] animate-leftsided w-[360px] h-[500px] top-10 -right-2/3 bg-pink-800 rotate-[-43.21deg]' />
         <TitleDiv>
-          <Title>Ваша корзина</Title>
+          <Title>Your cart</Title>
           <TfiClose size={24} onClick={closeCart} className="scale-[.7] cursor-pointer md:scale-100" />
         </TitleDiv>
+
         <CartList className="custom-scrollbar">
           {cartList.map((item, i) => (
             <CartItem i={i} id={item.id} amount={item.amount} additional={item.additional} appearing={false}
@@ -92,11 +93,12 @@ const Cart = ({ ref, visible = false, setVisible = () => console.log('') }) => {
             />
           ))}
         </CartList>
+
         <CardBottom>
-          <CartTitle>Предварительный итог: {sum !== 0 ? sum.toString().slice(0, -3) + ',' + sum.toString().slice(-3) : 0}.00 руб.</CartTitle>
-          <CartSubtitle>Чтобы узнать стоимость доставки, перейдите к оформлению заказа.</CartSubtitle>
+          <CartTitle>Preliminary cost: {sum !== 0 ? sum.toString().slice(0, -3) + ',' + sum.toString().slice(-3) : 0}.00 rub.</CartTitle>
+          <CartSubtitle>To find out the shipping cost, please proceed <br />to checkout.</CartSubtitle>
         </CardBottom>
-        <CheckoutButton onClick={closeCart} to='/checkout'>Оформить заказ</CheckoutButton>
+        <CheckoutButton onClick={closeCart} to='/checkout'>Checkout</CheckoutButton>
       </Content>
     </Div>
   )

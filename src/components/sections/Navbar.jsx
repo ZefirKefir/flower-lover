@@ -85,7 +85,7 @@ const Navbar = ({ landing = false, logoLanding = false }) => {
         <SearchResultsPC className={`${searchMode ? 'hidden lg:block' : 'hidden'} custom-scrollbar`}>
           <Container>
             <div className={searchText.length === 0 ? 'hidden' : 'block'}>
-              <ResultsTitle className='mt-[1.875rem] mb-5'>Результат поиска: <span className='text-pink-300'>{searchText}</span></ResultsTitle>
+              <ResultsTitle className='mt-[1.875rem] mb-5'>Search Results: <span className='text-pink-300'>{searchText}</span></ResultsTitle>
               <ResultsGrid className='mt-[1.875em]'>
                 {searchText.length !== 0 ? foundList.map(item => (
                   <ProductCard id={item.id} name={item.name} feature={item.feature} price={item.price} src={item.src} actual={item.actualPrice} wide />
@@ -94,10 +94,10 @@ const Navbar = ({ landing = false, logoLanding = false }) => {
               {foundList.length === 0 ? (
                 <>
                   <ResultsText className='mt-10 uppercase md:text-sm'>
-                    По данному запросу ничего не найдено.<br />
-                    Попробуйте еще раз или перейдите в каталог
+                    No results found for this search.<br />
+                    Try again or go to the Catalog
                   </ResultsText>
-                  <CatalogLink onClick={unfocus} to='/catalog'>В каталог</CatalogLink>
+                  <CatalogLink onClick={unfocus} to='/catalog'>To catalog</CatalogLink>
                 </>
               ) : ''}
             </div>
@@ -109,7 +109,7 @@ const Navbar = ({ landing = false, logoLanding = false }) => {
               <SearchIcon className='w-6' src={images.icons.search} alt='search' />
               <SearchInput onChange={(e) => setSearchText(e.target.value)}
                 onKeyUp={handleEscClick} ref={mobInputRef}
-                placeholder='Введите свой запрос'
+                placeholder='Search for products'
               />
               <IoCloseOutline className='cursor-pointer text-[#7c7c7c]' size={24}
                 onClick={() => {
@@ -118,7 +118,7 @@ const Navbar = ({ landing = false, logoLanding = false }) => {
               />
             </SearchDiv>
             <div className={searchText.length === 0 ? 'hidden' : 'block'}>
-              <ResultsTitle className='my-5'>Результат поиска: <span className='text-pink-300'>{searchText}</span></ResultsTitle>
+              <ResultsTitle className='my-5'>Search Results: <span className='text-pink-300'>{searchText}</span></ResultsTitle>
               <ResultsGrid>
                 {searchText.length !== 0 ? foundList.map(item => (
                   <ProductCard id={item.id} name={item.name} feature={item.feature} price={item.price} src={item.src} actual={item.actualPrice} wide />
@@ -127,10 +127,10 @@ const Navbar = ({ landing = false, logoLanding = false }) => {
               {foundList.length === 0 ? (
                 <>
                   <ResultsText className='mt-10 uppercase md:text-sm'>
-                    По данному запросу ничего не найдено.<br />
-                    Попробуйте еще раз или перейдите в каталог
+                    No results found for this search.<br />
+                    Try again or go to the Catalog
                   </ResultsText>
-                  <CatalogLink onClick={unfocus} to='/catalog'>В каталог</CatalogLink>
+                  <CatalogLink onClick={unfocus} to='/catalog'>To catalog</CatalogLink>
                 </>
               ) : ''}
             </div>
@@ -155,42 +155,41 @@ const Navbar = ({ landing = false, logoLanding = false }) => {
                   document.body.classList.add('hide-scrollbar');
                 }}>
                   <SearchIcon src={images.icons.search} alt='search' />
-                  поиск
+                  search
                 </NavInput>
                 <NavItem>
-                  <NavLink to='/' onClick={closeMobile}>Главная</NavLink>
+                  <NavLink to='/' onClick={closeMobile}>Home</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink to='/catalog' onClick={closeMobile}>Каталог</NavLink>
+                  <NavLink to='/catalog' onClick={closeMobile}>Catalog</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink to='/delment' onClick={closeMobile}>Доставка и оплата</NavLink>
+                  <NavLink to='/delment' onClick={closeMobile}>Delivery & Payment</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink to='/aboutus' onClick={closeMobile}>О нас</NavLink>
+                  <NavLink to='/aboutus' onClick={closeMobile}>About Us</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink to='/contacts' onClick={closeMobile}>Контакты</NavLink>
+                  <NavLink to='/contacts' onClick={closeMobile}>Contacts</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink to='/faq' onClick={closeMobile}>FAQ</NavLink>
                 </NavItem>
-                <div className="h-px w-[6.25em] bg-[#555]">damn</div>
                 <MobileNavContact>
                   <ContactBlock>
                     <ContactTitle>
                       <a href="mailto: zakaz@loverflower.by">zakaz@loverflower.by</a>
                     </ContactTitle>
-                    <ContactDescr className="max-w-[11.25rem]">Доставка 24/7 по договоренности с оператором</ContactDescr>
+                    <ContactDescr className="max-w-[11.25rem]">24/7 delivery by agreement with the operator</ContactDescr>
                   </ContactBlock>
                   <ContactBlock>
-                    <ContactTitle>ул. Тимирязева 67</ContactTitle>
-                    <ContactDescr>10:00 до 21:00<br />
-                      без выходных</ContactDescr>
+                    <ContactTitle>Timiryazeva St. 67</ContactTitle>
+                    <ContactDescr>10:00 - 21:00<br />
+                      everyday</ContactDescr>
                   </ContactBlock>
                   <ContactBlock>
-                    <a href="#" className="font-oswald font-normal text-[10px] leading-normal tracking-[0.04em] text-[#555] block hover:text-[#888] transition">Политика конфиденциальности</a>
-                    <a href="#" className="font-oswald font-normal text-[10px] leading-normal tracking-[0.04em] text-[#555] block hover:text-[#888] transition">Обработка персональных данных</a>
+                    <a href="#" className="font-oswald font-normal text-[10px] leading-normal tracking-[0.04em] text-[#555] block hover:text-[#888] transition">Privacy Policy</a>
+                    <a href="#" className="font-oswald font-normal text-[10px] leading-normal tracking-[0.04em] text-[#555] block hover:text-[#888] transition">Processing of personal data</a>
                   </ContactBlock>
                   <ContactBlock>
                     <ContactTitle>
@@ -219,16 +218,16 @@ const Navbar = ({ landing = false, logoLanding = false }) => {
             <NavList className={searchMode ? 'w-full' : ''}>
               <Logo className={inView ? 'translate-y-0 opacity-100' : '-translate-y-2 opacity-0'} />
               <NavItem className={inView ? 'translate-y-0 opacity-100 delay-[.05s]' : 'opacity-0 -translate-y-6'}>
-                <NavLink to='/catalog'>Каталог</NavLink>
+                <NavLink to='/catalog'>Catalog</NavLink>
               </NavItem>
               <NavItem className={inView ? 'translate-y-0 opacity-100 delay-[.1s]' : 'opacity-0 -translate-y-6'}>
-                <NavLink to='/delment'>Доставка и оплата</NavLink>
+                <NavLink to='/delment'>Delivery & Payment</NavLink>
               </NavItem>
               <NavItem className={inView ? 'translate-y-0 opacity-100 delay-[.15s]' : 'opacity-0 -translate-y-6'}>
-                <NavLink to='/aboutus'>О нас</NavLink>
+                <NavLink to='/aboutus'>About Us</NavLink>
               </NavItem>
               <NavItem className={inView ? 'translate-y-0 opacity-100 delay-[.2s]' : 'opacity-0 -translate-y-6'}>
-                <NavLink to='/contacts'>Контакты</NavLink>
+                <NavLink to='/contacts'>Contacts</NavLink>
               </NavItem>
               <NavItem className={inView ? 'translate-y-0 opacity-100 delay-[.25s]' : 'opacity-0 -translate-y-6'}>
                 <NavLink to='/faq'>FAQ</NavLink>
@@ -242,13 +241,13 @@ const Navbar = ({ landing = false, logoLanding = false }) => {
                     document.body.classList.add('hide-scrollbar');
                   }}>
                   <SearchIcon src={images.icons.search} alt='search' />
-                  поиск
+                  search
                 </NavInput>
                 <SearchDiv className={searchMode ? 'flex' : 'absolute -top-40 opacity-0'}>
                   <SearchIcon className='w-6' src={images.icons.search} alt='search' />
                   <SearchInput onChange={(e) => setSearchText(e.target.value)}
                     onKeyUp={handleEscClick} ref={ref}
-                    placeholder='Введите свой запрос'
+                    placeholder='Search for products'
                   />
                   <IoCloseOutline className='cursor-pointer text-[#7c7c7c]' size={24}
                     onClick={() => {
@@ -269,13 +268,13 @@ const Navbar = ({ landing = false, logoLanding = false }) => {
                 <ContactTitle>
                   <a href="mailto: zakaz@loverflower.by">zakaz@loverflower.by</a>
                 </ContactTitle>
-                <ContactDescr>Доставка 24/7 по договоренности с оператором</ContactDescr>
+                <ContactDescr>24/7 delivery by agreement with the operator</ContactDescr>
               </ContactBlock>
               <ContactBlock className={inView ? 'translate-y-0 opacity-100 delay-[.1s]' : '-translate-y-4 opacity-0'}>
-                <ContactTitle>ул. Тимирязева 67</ContactTitle>
+                <ContactTitle>Timiryazeva St. 67</ContactTitle>
                 <ContactDescr>
-                  10:00 до 21:00<br />
-                  без выходных
+                  10:00 - 21:00<br />
+                  everyday
                 </ContactDescr>
               </ContactBlock>
               <NavSocial className={`duration-300 ease-in-out ${inView ? 'translate-y-0 opacity-100 delay-[.2s]' : '-translate-y-4 opacity-0'}`}>
@@ -294,7 +293,7 @@ const Navbar = ({ landing = false, logoLanding = false }) => {
                   <ContactTitle className={`duration-300 ease-in-out ${inView ? 'translate-y-0 opacity-100 delay-[.3s]' : '-translate-y-4 opacity-0'}`}>+375 (29) 113-69-69</ContactTitle>
                   <NavButtonButLink className={`duration-300 ease-in-out flex mt-2 mb-5 ${inView ? 'translate-y-0 opacity-100 delay-[.35s]' : '-translate-y-4 opacity-0'}`} href='tel: +375291136969'>
                     <img src={images.icons.phone} />
-                    заказать звонок
+                    Request a call
                   </NavButtonButLink>
                   <CartButton className={`duration-300 ease-in-out ${inView ? 'translate-y-0 opacity-100 delay-[.4s]' : '-translate-y-4 opacity-0'}`} onClick={openCart}>
                     <img className="w-[30px] aspect-square" src={images.icons.cart} alt='cart' />
@@ -306,7 +305,7 @@ const Navbar = ({ landing = false, logoLanding = false }) => {
             <FixedNavContact className={navFixed ? 'hidden lg:flex' : 'hidden'}>
               <ContactTitle className="mt-1">
                 <NavButtonButLink className={`duration-300 ease-in-out ${inView ? 'translate-y-0 opacity-100 delay-[.05s]' : '-translate-y-6 opacity-0'} ${searchMode ? 'hidden' : 'flex'}`} href='tel:+375291136969'>
-                  <img src={images.icons.phone} className='w-6 translate-y-1' />
+                  <img src={images.icons.phone} className='w-5 translate-y-1' />
                   +375 (29) 113-69-69
                 </NavButtonButLink>
               </ContactTitle>
@@ -402,7 +401,7 @@ const NavCloseButton = tw.button`
   text-teal
 `;
 const NavList = tw.ul`
-  lg:flex items-center gap-7 xl:gap-[50px]
+  lg:flex items-center gap-7 xl:gap-10
   hidden
 `;
 const NavItem = tw.li`relative duration-300 ease-in-out`;

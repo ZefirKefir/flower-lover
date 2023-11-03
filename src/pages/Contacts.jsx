@@ -21,7 +21,7 @@ const Contacts = () => {
     triggerOnce: true,
   });
   const { ref: back2Ref, inView: back2InView } = useInView({
-    threshold: .25,
+    threshold: .2,
     triggerOnce: true,
   });
   const { ref: fancyRef, inView: fancyInView } = useInView({
@@ -50,33 +50,33 @@ const Contacts = () => {
 
         <ContactsBack1 ref={back1Ref} className={back1InView ? 'translate-x-0 opacity-100' : 'translate-x-12 opacity-0'} src={images.contactsBack} />
         <Container>
-          <Path path='/contacts' pathName="контакты" />
+          <Path path='/contacts' pathName="contacts" />
           <SectionTitleCustom className="mt-5 md:mt-[2.875rem] md:ml-[0.95em] mb-5 md:mb-10">
             <>
-              контакты
+              contacts
             </>
           </SectionTitleCustom>
           <GridMobile className='md:hidden'>
-            <CardTitle>время работы</CardTitle>
-            <CardText className='mb-5'>с 10:00 до 21:00<br />без выходных</CardText>
-            <CardTitle>Адрес</CardTitle>
-            <CardText className='mb-5'>г. Минск, ул. Тимирязева 67, комн. 112</CardText>
-            <CardTitle>Телефон</CardTitle>
+            <CardTitle>work hours</CardTitle>
+            <CardText className='mb-5'>from 10:00 to 21:00<br />everyday</CardText>
+            <CardTitle>address</CardTitle>
+            <CardText className='mb-5'>Minsk, Timiryazeva St. 67, room 112</CardText>
+            <CardTitle>phone</CardTitle>
             <CardText className='mb-5'>+375 (29) 113-69-69</CardText>
             <CardTitle>E-mail</CardTitle>
             <CardText>zakaz@loverflower.by</CardText>
           </GridMobile>
           <GridX4 className="hidden md:flex" square>
             <>
-              <CardTitle>время работы</CardTitle>
-              <CardText className='text-center mt-[1.875rem]'>с 10:00 до 21:00 без выходных</CardText>
+              <CardTitle>work hours</CardTitle>
+              <CardText className='text-center mt-[1.875rem]'>from 10:00 to 21:00<br />everyday</CardText>
             </>
             <>
-              <CardTitle>Адрес</CardTitle>
-              <CardText className='text-center mt-[1.875rem]'>г. Минск, ул. Тимирязева 67, комн. 112</CardText>
+              <CardTitle>address</CardTitle>
+              <CardText className='text-center mt-[1.875rem]'>Minsk, Timiryazeva St. 67, room 112</CardText>
             </>
             <>
-              <CardTitle>Телефон</CardTitle>
+              <CardTitle>phone</CardTitle>
               <CardText className='text-center mt-[1.875rem]'>+375 (29) 113-69-69</CardText>
             </>
             <>
@@ -91,27 +91,27 @@ const Contacts = () => {
               <span className={`${fancyInView ? 'translate-x-0 opacity-100 delay-100' : '-translate-x-10 opacity-0'} duration-300 ease-in-out block -ml-4`}>questions?</span>
             </FancyText>
             <SectionTitleCustom>
-              напишите
-              <span className="block md:ml-[3.5em]">нам</span>
+              write
+              <span className="block md:ml-[2.75em]">us</span>
             </SectionTitleCustom>
             <Content ref={ref}>
               <Line className={inView ? 'scale-x-100' : 'scale-x-[.1]'} />
               <FormText className={inView ? 'delay-100 translate-x-0 opacity-100' : 'translate-x-12 opacity-0'}>
-                Отправьте ваш вопрос, заказ, предложение или жалобу через форму обратной связи, и наш специалист свяжется с вами в течение 15 минут.
+                Submit your question, order, suggestion or complaint via the feedback form and our specialist will contact you within 15 minutes.
               </FormText>
               <Form action="#">
-                <LandingInput parentClassName={inView ? 'delay-200 translate-x-0 opacity-100' : 'translate-x-10 opacity-0'} colors='bg-black peer-placeholder-shown:bg-black peer-focus:bg-black' type='text' id='name' name='name' label='Ваше имя' />
-                <LandingInput parentClassName={inView ? 'delay-300 translate-x-0 opacity-100' : 'translate-x-10 opacity-0'} colors='bg-black peer-placeholder-shown:bg-black peer-focus:bg-black' type='tel' id='phone' name='phone' label='Ваш номер' numeric />
-                <LandingInput parentClassName={inView ? 'delay-[.4s] translate-x-0 opacity-100' : 'translate-x-10 opacity-0'} className="bg-black" colors='bg-black peer-placeholder-shown:bg-black peer-focus:bg-black' type='textarea' id='commentary' name='commentary' label='Ваш комментарий' />
-                <ButtonPrimary noInView className={`self-start mt-2.5 ${inView ? 'delay-500 translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`} pX='92px'>отправить</ButtonPrimary>
+                <LandingInput parentClassName={inView ? 'delay-200 translate-x-0 opacity-100' : 'translate-x-10 opacity-0'} colors='bg-black peer-placeholder-shown:bg-black peer-focus:bg-black' type='text' id='name' name='name' label='Your name' />
+                <LandingInput parentClassName={inView ? 'delay-300 translate-x-0 opacity-100' : 'translate-x-10 opacity-0'} colors='bg-black peer-placeholder-shown:bg-black peer-focus:bg-black' type='tel' id='phone' name='phone' label='Your number' numeric />
+                <LandingInput parentClassName={inView ? 'delay-[.4s] translate-x-0 opacity-100' : 'translate-x-10 opacity-0'} className="bg-black" colors='bg-black peer-placeholder-shown:bg-black peer-focus:bg-black' type='textarea' id='commentary' name='commentary' label='Your commentary' />
+                <ButtonPrimary noInView className={`self-start mt-2.5 ${inView ? 'delay-500 translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`} pX='92px'>Submit</ButtonPrimary>
                 <FormDescr className={inView ? 'delay-[.8s] translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}>
-                  Нажимая  на кнопку «Отправить», я даю свое согласие на обработку персональных данных, в соответствии с
-                  {' '}<a href="#" className="font-normal text-pink-300 underline">Политикой&nbsp;конфиденциальности</a>
+                  By submitting the form, I consent to the processing of personal data in accordance with the
+                  {' '}<a href="#" className="font-normal text-pink-300 underline">Privacy&nbsp;Policy</a>.
                 </FormDescr>
               </Form>
             </Content>
           </Flex>
-          <CardTitle className='mt-[3.75rem] md:mt-[6.25rem] mb-2.5 md:mb-5'>Мы на карте</CardTitle>
+          <CardTitle className='mt-[3.75rem] md:mt-[6.25rem] mb-2.5 md:mb-5'>us on the map</CardTitle>
           <div ref={mapRef} className={`w-full aspect-square md:aspect-[111/42] bg-white/10 duration-500 ease-in-out
             ${mapInView ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}
           `}>
@@ -168,11 +168,12 @@ const FancyText = tw.p`
   -rotate-[18deg]
 `;
 const Content = tw.div`
+  lg:max-w-[340px] ll:max-w-[400px] xl:max-w-[45%]
   md:mt-36 lg:mt-0
   flex flex-col items-start lg:items-end
 `;
 const Line = tw.span`
-  w-1/3 md:w-[60%] h-px
+  w-1/3 md:w-3/4 xl:w-3/5 h-px
   mt-10 md:mt-[3.75em] mb-5 lg:mb-[3.25em]
   bg-teal
   duration-500 ease-in-out origin-right

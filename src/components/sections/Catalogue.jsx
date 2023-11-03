@@ -24,7 +24,7 @@ import NoRes from "../NoRes";
 const idList = ['FMAA1S', 'BQZ9W8', 'Y1JB95', 'HFVARV', 'T13DST', '063NYB', 'P2YRDJ', 'KIMC7C', 'X65GJL', 'FW72RE', 'GUEHRY', 'CMD3M2', '1K7JAC', 'UDKGTR', '7M3XV3', 'EP3V1I', 'EZ0M04', 'A2OVVU', 'XDIN8H', 'HSUWQ8', 'ID2QR5', 'PS20OX', 'FFX3CW', '9VBO6O', 'WS4T8X', '596EQ0', '56DTQA', 'BY2GLE', '0WXWZP', 'TYASS3', 'WYSAUF', 'D1T71U', '4BZZQQ', '9FN7L6', 'NZ8ZYT', '64K8GK', 'HP12HI', 'O5RCN9', 'ERXPB8', '87B0V0', 'L4U579', '4L5QFC', '4JC6FM', 'AA1SBQ', 'Z9W8Y1', 'JB95HF', 'VARVT1', '3DST06', '3NYBP2', 'YRDJKI', 'MC7CX6', '5GJLFW', '72REGU', 'EHRYCM'];
 
 const Catalogue = () => {
-  const [sortBy, setSortBy] = useState(localStorage.getItem('sortBy') || 'по популярности');
+  const [sortBy, setSortBy] = useState(localStorage.getItem('sortBy') || 'by popularity');
   const [showDropdown, setShowDropdown] = useState(false);
   // mob dropdowns
   const [showMobFilters, setShowMobFilters] = useState(false);
@@ -118,9 +118,9 @@ const Catalogue = () => {
   // sort
   tempList.length = 0;
   Array.from(productsList.filter(item => list.includes(item.id))).map(item => tempList.push(item));
-  sortBy === 'по популярности' ? tempList.sort((a, b) => b.rating - a.rating) :
-    sortBy === 'сначала дорогие' ? tempList.sort((a, b) => b.price - a.price) :
-      sortBy === 'сначала дешёвые' ? tempList.sort((a, b) => a.price - b.price) : '';
+  sortBy === 'by popularity' ? tempList.sort((a, b) => b.rating - a.rating) :
+    sortBy === 'expensive first' ? tempList.sort((a, b) => b.price - a.price) :
+      sortBy === 'cheapest first' ? tempList.sort((a, b) => a.price - b.price) : '';
   list.length = 0;
   tempList.map(item => list.push(item.id));
 
@@ -163,13 +163,15 @@ const Catalogue = () => {
         ${backInView ? 'translate-x-0 opacity-100' : 'translate-x-12 opacity-0'}
       `} src={images.red} />
       <Container>
-        <Path path='/catalog' pathName='Каталог' />
+        <Path path='/catalog' pathName='Catalog' />
         <TitleBlock>
           <SectionTitle>
-            каталог
-            <span className="block ml-16 sm:ml-24 md:ml-32 lg:ml-64">букетов</span>
+            bouquet
+            <span className="block ml-16 sm:ml-24 md:ml-28 lg:ml-48">catalog</span>
           </SectionTitle>
-          <Text ref={textRef} className={`duration-500 ease-in-out ${textInView ? 'translate-x-0 opacity-100' : 'translate-x-6 opacity-0'}`}>В нашем магазине самый большой выбор букетов для любых событий:</Text>
+          <Text ref={textRef} className={`duration-500 ease-in-out ${textInView ? 'translate-x-0 opacity-100' : 'translate-x-6 opacity-0'}`}>
+            Our store has the largest selection of bouquets for any event:
+          </Text>
           <Categories ref={catRef} className="hidden md:flex">
             {data.categories.map((item, index) => (
               <Category key={index}
@@ -191,7 +193,7 @@ const Catalogue = () => {
               ${showMobFilters ? 'text-teal' : 'text-pink-300'}
               ${mobInView ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'}  
             `} onClick={() => setShowMobFilters(!showMobFilters)}>
-              фильтр товаров
+              Filter
               <IoCaretDown size={14} className={`transition-all duration-200 ${showMobFilters ? '-scale-y-100' : ''}`} />
             </MobileFilterButton>
             <Filters action="#" className={`
@@ -199,46 +201,46 @@ const Catalogue = () => {
               ${showMobFilters ? 'pt-5 pb-[1.875rem] scale-y-100 opacity-100 h-full' : 'scale-y-0 opacity-0 h-0'}
               `}>
               <Filter>
-                <FilterTitle>По свету</FilterTitle>
+                <FilterTitle>by glim</FilterTitle>
                 <div className="flex flex-col gap-[5px]">
-                  <Checkbox theme='shades' name='soft' displayName='нежные' />
-                  <Checkbox theme='shades' name='light' displayName='яркие' />
+                  <Checkbox theme='shades' name='soft' displayName='soft' />
+                  <Checkbox theme='shades' name='light' displayName='light' />
                 </div>
               </Filter>
               <Filter>
-                <FilterTitle>По цвету</FilterTitle>
+                <FilterTitle>by color</FilterTitle>
                 <div className="flex flex-col gap-[5px]">
-                  <Checkbox theme="colors" name='white' displayName='белый' />
-                  <Checkbox theme="colors" name='yellow' displayName='желтый' />
-                  <Checkbox theme="colors" name='green' displayName='зелёный' />
-                  <Checkbox theme="colors" name='red' displayName='красный' />
-                  <Checkbox theme="colors" name='orange' displayName='оранжевый' />
-                  <Checkbox theme="colors" name='pink' displayName='розовый' />
-                  <Checkbox theme="colors" name='blue' displayName='синий' />
-                  <Checkbox theme="colors" name='violet' displayName='фиолетовый' />
-                  <Checkbox theme="colors" name='mixed' displayName='смешано' />
+                  <Checkbox theme="colors" name='white' displayName='white' />
+                  <Checkbox theme="colors" name='yellow' displayName='yellow' />
+                  <Checkbox theme="colors" name='green' displayName='green' />
+                  <Checkbox theme="colors" name='red' displayName='red' />
+                  <Checkbox theme="colors" name='orange' displayName='orange' />
+                  <Checkbox theme="colors" name='pink' displayName='pink' />
+                  <Checkbox theme="colors" name='blue' displayName='blue' />
+                  <Checkbox theme="colors" name='violet' displayName='violet' />
+                  <Checkbox theme="colors" name='mixed' displayName='mixed' />
                 </div>
               </Filter>
               <Filter>
-                <FilterTitle>По формату</FilterTitle>
+                <FilterTitle>by format</FilterTitle>
                 <div className="flex flex-col gap-[5px]">
-                  <Checkbox values={values} setValues={setValues} theme="format" name='bouquet' displayName='букет' />
-                  <Checkbox values={values} setValues={setValues} theme="format" name='vase' displayName='в горшке' />
-                  <Checkbox values={values} setValues={setValues} theme="format" name='envelope' displayName='в конверте' />
-                  <Checkbox values={values} setValues={setValues} theme="format" name='basket' displayName='в корзине' />
-                  <Checkbox values={values} setValues={setValues} theme="format" name='hatbox' displayName='в шляпной коробке' />
-                  <Checkbox values={values} setValues={setValues} theme="format" name='box' displayName='в ящике' />
+                  <Checkbox values={values} setValues={setValues} theme="format" name='bouquet' displayName='bouquet' />
+                  <Checkbox values={values} setValues={setValues} theme="format" name='vase' displayName='in a pot' />
+                  <Checkbox values={values} setValues={setValues} theme="format" name='envelope' displayName='in an envelope' />
+                  <Checkbox values={values} setValues={setValues} theme="format" name='basket' displayName='in the basket' />
+                  <Checkbox values={values} setValues={setValues} theme="format" name='hatbox' displayName='in a hat box' />
+                  <Checkbox values={values} setValues={setValues} theme="format" name='box' displayName='in the box' />
                 </div>
               </Filter>
               <Filter>
-                <FilterTitle>стоимость</FilterTitle>
-                <DoubleSlider currency='₽' title='Цена'
+                <FilterTitle>price segment</FilterTitle>
+                <DoubleSlider currency='₽' title='price'
                   values={values} setValues={setValues}
                   min={minimum} max={maximum}
                 />
               </Filter>
               <Filter>
-                <FilterTitle>по цветку</FilterTitle>
+                <FilterTitle>by flower</FilterTitle>
                 <div className='max-h-[10rem] custom-scrollbar flex flex-col gap-[5px]'>
                   {data.flowers.sort((a, b) => a.name.localeCompare(b.name)).map(flower => (
                     <Checkbox theme="flowers" name={flower.id} displayName={flower.name}
@@ -252,28 +254,27 @@ const Catalogue = () => {
                 setValues([minimum, maximum]);
                 scrollToFirst();
               }}>
-                Сбросить фильтр
+                Reset filter
               </ResetButton>
             </Filters>
             <div ref={mobRef}>
-              {/* <div className="h-40" /> */}
               <MobileFilterButton className={`duration-300 ease-in-out
                 ${showMobSortBy ? 'text-teal' : 'text-pink-300'}
                 ${mobInView ? 'translate-x-0 opacity-100 delay-150' : '-translate-x-4 opacity-0'}
               `} onClick={() => setShowMobSortBy(!showMobSortBy)}>
-                сортировка товаров
+                sort
                 <IoCaretDown size={14} className={`transition-all duration-200 ${showMobSortBy ? '-scale-y-100' : ''}`} />
               </MobileFilterButton>
               <div className={`duration-300 origin-top flex flex-col gap-[5px] ${showMobSortBy ? 'h-full scale-y-100 opacity-100' : 'h-0 scale-y-0 opacity-0'}`}>
-                <Radio name='по популярности' sortBy={sortBy} setSortBy={setSortBy} />
-                <Radio name='сначала дорогие' sortBy={sortBy} setSortBy={setSortBy} />
-                <Radio name='сначала дешёвые' sortBy={sortBy} setSortBy={setSortBy} className='mb-2.5' />
+                <Radio name='by popularity' sortBy={sortBy} setSortBy={setSortBy} />
+                <Radio name='expensive first' sortBy={sortBy} setSortBy={setSortBy} />
+                <Radio name='cheapest first' sortBy={sortBy} setSortBy={setSortBy} className='mb-2.5' />
               </div>
               <MobileFilterButton className={`duration-300 ease-in-out
                 ${showMobCategories ? 'text-teal' : 'text-pink-300'}
                 ${mobInView ? 'translate-x-0 opacity-100 delay-300' : '-translate-x-4 opacity-0'}
               `} onClick={() => setShowMobCategories(!showMobCategories)}>
-                Категории
+                categories
                 <IoCaretDown size={14} className={`transition-all duration-200 ${showMobCategories ? '-scale-y-100' : ''}`} />
               </MobileFilterButton>
             </div>
@@ -295,46 +296,46 @@ const Catalogue = () => {
             ${filtersInView ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}
           `}>
             <Filter>
-              <FilterTitle>По свету</FilterTitle>
+              <FilterTitle>by glim</FilterTitle>
               <div className="flex flex-col gap-[5px]">
-                <Checkbox theme='shades' name='soft' displayName='нежные' />
-                <Checkbox theme='shades' name='light' displayName='яркие' />
+                <Checkbox theme='shades' name='soft' displayName='soft' />
+                <Checkbox theme='shades' name='light' displayName='light' />
               </div>
             </Filter>
             <Filter>
-              <FilterTitle>По цвету</FilterTitle>
+              <FilterTitle>by color</FilterTitle>
               <div className="flex flex-col gap-[5px]">
-                <Checkbox theme="colors" name='white' displayName='белый' />
-                <Checkbox theme="colors" name='yellow' displayName='желтый' />
-                <Checkbox theme="colors" name='green' displayName='зелёный' />
-                <Checkbox theme="colors" name='red' displayName='красный' />
-                <Checkbox theme="colors" name='orange' displayName='оранжевый' />
-                <Checkbox theme="colors" name='pink' displayName='розовый' />
-                <Checkbox theme="colors" name='blue' displayName='синий' />
-                <Checkbox theme="colors" name='violet' displayName='фиолетовый' />
-                <Checkbox theme="colors" name='mixed' displayName='смешано' />
+                <Checkbox theme="colors" name='white' displayName='white' />
+                <Checkbox theme="colors" name='yellow' displayName='yellow' />
+                <Checkbox theme="colors" name='green' displayName='green' />
+                <Checkbox theme="colors" name='red' displayName='red' />
+                <Checkbox theme="colors" name='orange' displayName='orange' />
+                <Checkbox theme="colors" name='pink' displayName='pink' />
+                <Checkbox theme="colors" name='blue' displayName='blue' />
+                <Checkbox theme="colors" name='violet' displayName='violet' />
+                <Checkbox theme="colors" name='mixed' displayName='mixed' />
               </div>
             </Filter>
             <Filter>
-              <FilterTitle>По формату</FilterTitle>
+              <FilterTitle>by format</FilterTitle>
               <div className="flex flex-col gap-[5px]">
-                <Checkbox values={values} setValues={setValues} theme="format" name='bouquet' displayName='букет' />
-                <Checkbox values={values} setValues={setValues} theme="format" name='vase' displayName='в горшке' />
-                <Checkbox values={values} setValues={setValues} theme="format" name='envelope' displayName='в конверте' />
-                <Checkbox values={values} setValues={setValues} theme="format" name='basket' displayName='в корзине' />
-                <Checkbox values={values} setValues={setValues} theme="format" name='hatbox' displayName='в шляпной коробке' />
-                <Checkbox values={values} setValues={setValues} theme="format" name='box' displayName='в ящике' />
+                <Checkbox values={values} setValues={setValues} theme="format" name='bouquet' displayName='bouquet' />
+                <Checkbox values={values} setValues={setValues} theme="format" name='vase' displayName='in a pot' />
+                <Checkbox values={values} setValues={setValues} theme="format" name='envelope' displayName='in an envelope' />
+                <Checkbox values={values} setValues={setValues} theme="format" name='basket' displayName='in the basket' />
+                <Checkbox values={values} setValues={setValues} theme="format" name='hatbox' displayName='in a hat box' />
+                <Checkbox values={values} setValues={setValues} theme="format" name='box' displayName='in the box' />
               </div>
             </Filter>
             <Filter>
-              <FilterTitle>стоимость</FilterTitle>
-              <DoubleSlider currency='₽' title='Цена'
+              <FilterTitle>price segment</FilterTitle>
+              <DoubleSlider currency='₽' title='price'
                 values={values} setValues={setValues}
                 min={minimum} max={maximum}
               />
             </Filter>
             <Filter>
-              <FilterTitle>по цветку</FilterTitle>
+              <FilterTitle>by flower</FilterTitle>
               <div className='max-h-[10rem] custom-scrollbar flex flex-col gap-[5px]'>
                 {data.flowers.sort((a, b) => a.name.localeCompare(b.name)).map(flower => (
                   <Checkbox theme="flowers" name={flower.id} displayName={flower.name}
@@ -348,7 +349,7 @@ const Catalogue = () => {
               setValues([minimum, maximum]);
               scrollToFirst();
             }}>
-              Сбросить фильтр
+              Reset filter
             </ResetButton>
           </Filters>
           <Main>
@@ -369,20 +370,20 @@ const Catalogue = () => {
                 <SortDropdown className={showDropdown ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0'}>
                   <DropdownList>
                     <DropdownItem onClick={() => {
-                      setSortBy('по популярности');
+                      setSortBy('by popularity');
                       setShowDropdown(false);
-                      localStorage.setItem('sortBy', 'по популярности');
-                    }}>по популярности</DropdownItem>
+                      localStorage.setItem('sortBy', 'by popularity');
+                    }}>by popularity</DropdownItem>
                     <DropdownItem onClick={() => {
-                      setSortBy('сначала дорогие');
+                      setSortBy('expensive first');
                       setShowDropdown(false);
-                      localStorage.setItem('sortBy', 'сначала дорогие');
-                    }}>сначала дорогие</DropdownItem>
+                      localStorage.setItem('sortBy', 'expensive first');
+                    }}>expensive first</DropdownItem>
                     <DropdownItem onClick={() => {
-                      setSortBy('сначала дешёвые');
+                      setSortBy('cheapest first');
                       setShowDropdown(false);
-                      localStorage.setItem('sortBy', 'сначала дешёвые');
-                    }}>сначала дешёвые</DropdownItem>
+                      localStorage.setItem('sortBy', 'cheapest first');
+                    }}>cheapest first</DropdownItem>
                   </DropdownList>
                 </SortDropdown>
               </Sort>
@@ -430,7 +431,7 @@ const TitleBlock = tw.div`
   rounded-[20px]
 `;
 const Text = tw.p`
-  mt-2.5 md:mt-0
+  mt-2.5
   ml-16 sm:ml-24 md:ml-32 lg:ml-64 lg:max-w-[48.5%]
   md:mb-16
   font-oswald font-normal
@@ -443,7 +444,7 @@ const MobileFilters = tw.div`
   w-full
 `;
 const MobileFilterButton = tw.button`
-  flex items-center gap-5
+  flex items-center gap-3
   font-oswald font-normal
   text-base tracking-[0.1em]
   uppercase

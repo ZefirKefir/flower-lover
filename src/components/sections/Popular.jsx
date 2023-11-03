@@ -25,11 +25,11 @@ const Popular = () => {
       <div className='absolute hidden md:block rounded-full blur-[125px] animate-bubble-left-slow w-[810px] h-[250px] top-[60%] -left-[10%] bg-teal rotate-[32.83deg]' />
       <div className='absolute rounded-full  blur-[150px] md:blur-[125px] animate-bubble-right-slow w-[390px] md:w-[570px] h-[165px] md:h-[320px] bottom-[5%] md:bottom-[-7.5%] right-[-50%] md:top-[60%] md:left-[25%] bg-pink-600 rotate-[32.83deg]' />
       <Container>
-        <SectionTitle className="text-center md:text-left" nextClassName=',-mt-3 s:inline ml-3.5 md:block md:ml-[3.75em]'>
-          <>Популярные</>
-          <>букеты</>
+        <SectionTitle className="text-center md:text-left" nextClassName=',-mt-3 s:inline ml-3.5 md:block md:ml-[2.75em]'>
+          <>popular</>
+          <>bouquets</>
         </SectionTitle>
-        <SectionText className='mt-2.5 mb-6 md:mb-20 text-center'>Самые любимые композиции наших клиентов</SectionText>
+        <SectionText className='mt-2.5 mb-6 md:mb-20 text-center'>Favourite flower compositions of our clients</SectionText>
       </Container>
       <Slider mobile>
         {data.products.filter(item => item.categories?.includes('popular')).map((item, i) => (i < 5) ? (
@@ -38,7 +38,8 @@ const Popular = () => {
           </SliderItem>
         ) : '')}
       </Slider>
-      <CatalogLink ref={ref} to='/catalog' className={inView ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}>смотреть весь каталог
+      <CatalogLink ref={ref} to='/catalog' className={inView ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}>
+        view catalog
         <RightShortArrow></RightShortArrow>
       </CatalogLink>
     </Section>

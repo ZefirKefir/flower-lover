@@ -8,19 +8,20 @@ import Sign from "../Sign";
 import images from "../../constants/images";
 
 const steps = [
-  'Выберите какие цветы или подарки вы хотите купить',
-  'Оформите заказ, и мы отправим вам подтверждение на электронную почту, а так же менеджер свяжется с вами по телефону или в WhatsApp',
-  'Наши флористы бережно подойдут к созданию букета цветов в самом начале дня или накануне',
-  'Один из наших курьеров или партнёров доставит ваш заказ по указанному адресу. Мы отправим вам сообщение в Whats App как только заказ будет доставлен',
-  'Наслаждайтесь цветами , если вы заказали их для дома или любовью, которой поделились, если вы заказали для друга',
+  'Select which flowers or gifts you would like to buy.',
+  'Place your order and we will send you a confirmation by email, and the manager will also contact you by phone or WhatsApp.',
+  'Our florists will carefully approach the creation of a bouquet of flowers at any time of the day.',
+  'One of our couriers or partners will deliver your order to the specified address. We will send you a Whats App message as soon as your order has been delivered.',
+  'Enjoy the flowers if you ordered them for your home or the love shared if you ordered them for your soulmate.',
+  //   - empty space
 ]
 const OrderGuide = () => {
   const { ref, inView } = useInView({
-    threshold: .75,
+    threshold: .65,
     triggerOnce: true,
   });
   const { ref: imgRef, inView: imgInView } = useInView({
-    threshold: .4,
+    threshold: .35,
     triggerOnce: true,
   });
 
@@ -30,13 +31,13 @@ const OrderGuide = () => {
       <Img className={imgInView ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'} ref={imgRef} src={images.pinkFlower} />
       <Container>
         <SectionTitle className="ml-12 text-right -translate-y-16 xs:hidden" nextClassName="xs:inline,block pl-8 xs:inline,block pb-4 pr-4">
-          <>Как</>
-          <>сделать</>
-          <>заказ</>
+          <>How to</>
+          <>book</>
+          <>an order</>
         </SectionTitle>
         <SectionTitle className="hidden ml-12 text-center translate-y-0 xs:block md:ml-0 md:text-left" nextClassName=",block pb-4 pr-4">
-          <>Как сделать</>
-          <>заказ</>
+          <>How to book</>
+          <>an order</>
         </SectionTitle>
         <Steps ref={ref} className={inView ? 'after:scale-y-100' : 'after:scale-y-[.1]'}>
           <Flex>
@@ -49,7 +50,7 @@ const OrderGuide = () => {
                     index === 0 ? inView ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0' :
                       index === 1 ? inView ? 'delay-100 translate-x-0 opacity-100' : '-translate-x-10 opacity-0' :
                         index === 2 ? inView ? 'delay-200 translate-x-0 opacity-100' : '-translate-x-10 opacity-0' : ''
-                  }>{index + 1} шаг</StepTitle>
+                  }>step {index + 1}</StepTitle>
                   <StepText className={
                     index === 0 ? inView ? 'delay-100 translate-x-0 opacity-100' : '-translate-x-10 opacity-0' :
                       index === 1 ? inView ? 'delay-200 translate-x-0 opacity-100' : '-translate-x-10 opacity-0' :
@@ -66,7 +67,7 @@ const OrderGuide = () => {
                   <StepTitle className={
                     index === 3 ? inView ? 'delay-300 translate-x-0 opacity-100' : '-translate-x-10 opacity-0' :
                       index === 4 ? inView ? 'delay-[.4s] translate-x-0 opacity-100' : '-translate-x-10 opacity-0' : ''
-                  }>{index + 1} шаг</StepTitle>
+                  }>step {index + 1}</StepTitle>
                   <StepText className={
                     index === 3 ? inView ? 'delay-[.4] translate-x-0 opacity-100' : '-translate-x-10 opacity-0' :
                       index === 4 ? inView ? 'delay-500 translate-x-0 opacity-100' : '-translate-x-10 opacity-0' : ''
@@ -98,7 +99,7 @@ const Img = tw.img`
 `;
 const Steps = tw.div`
   ml-auto w-full md:w-[70%]
-  mt-0 xs:mt-9
+  mt-0 xs:mt-9 lg:mt-16
   pb-10 md:pb-0 last:pb-0
   relative md:pr-10
   after:hidden md:after:block

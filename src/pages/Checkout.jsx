@@ -109,61 +109,60 @@ const Checkout = () => {
         <BackRight1 className={`duration-500 ease-in-out ${back1InView ? 'translate-x-0 opacity-100' : 'translate-x-12 opacity-0'}`} src={images.checkoutBack} />
         <BackRight2 className={`duration-500 ease-in-out ${back1InView ? 'translate-x-0 opacity-100' : 'translate-x-12 opacity-0'}`} src={images.checkoutBack} />
         <Container>
-          <Path path={'/checkout'} pathName="Оформление заказа" />
+          <Path path={'/checkout'} pathName="Checkout" />
           <SectionTitle className="mt-5 mb-[3.75rem] md:mb-0 md:mt-[3.75rem] relative">
-            Оформление
-            <span className="block md:ml-24">заказа</span>
+            Checkout
             <Sign className={`
               absolute
-              -bottom-10 md:-bottom-20 xl:-bottom-8
-              right-[38.75%] sm:right-[55%] md:right-[15.5%] lg:right-1/3
+              -bottom-10 md:-bottom-28 xl:-bottom-16
+              right-[38.75%] sm:right-2/5 md:right-1/5 lg:right-1/4
               translate-x-[71.25%] sm:translate-x-0
               rotate-[-19.17deg]
               text-pink-300
             `} />
           </SectionTitle>
-          <SectionHeading className='hidden mt-20 mb-10 md:block'>Оформление заказа</SectionHeading>
+          <SectionHeading className='hidden mt-20 mb-10 md:block'>Checkout</SectionHeading>
           <Content>
             <Left>
               <Form action="#" onSubmit={(e) => e.preventDefault()}>
-                <SectionTitleSm>Контактные данные</SectionTitleSm>
-                <Input className='mt-5' id='name' label='Ваше имя*' placeholder='Введите ваше имя' />
+                <SectionTitleSm>Contact details</SectionTitleSm>
+                <Input className='mt-5' id='name' label='Your name*' placeholder='Your name' />
                 <Input numeric type="tel" className='mt-5' id='phone' label='Ваш телефон*' placeholder='+7 (977) 777-77-77' />
-                <Input className='mt-5' id='email' label='Ваш e-mail*' placeholder='Введите вашу почту' />
-                <Input className='mt-5' id='receiver_name' label='Имя получателя (необязательно)' placeholder='Введите имя получателя' />
-                <Input className='mt-5' id='commentary' label='Комментарий к заказу' placeholder='Примечания к вашеу заказу,  особые пожелания отделу доставки' />
-                <SectionTitleSm className='mt-[3.75rem] mb-5'>Доставка</SectionTitleSm>
+                <Input className='mt-5' id='email' label='Your email*' placeholder='Your email' />
+                <Input className='mt-5' id='receiver_name' label='Reveiver name (optional)' placeholder='Reveiver name' />
+                <Input className='mt-5' id='commentary' label='Comments on the order' placeholder='Notes on your order, special requests to the delivery department' />
+                <SectionTitleSm className='mt-[3.75rem] mb-5'>Delivery</SectionTitleSm>
                 <RadioDiv className={`mb-5 ${radios1InView ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
-                  <Radio type='radio' name="delivery" id='takeaway' className="peer" />
+                  <Radio type='radio' name="delivery" id='pickup' className="peer" />
                   <Circle />
-                  <Label htmlFor='takeaway'>Самовывоз</Label>
+                  <Label htmlFor='pickup'>Pickup</Label>
                 </RadioDiv>
                 <RadioDiv ref={radios1Ref} className={`mb-5 ${radios1InView ? 'delay-100 translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
                   <Radio defaultChecked type='radio' name="delivery" id='delivery' className="peer" />
                   <Circle />
-                  <Label htmlFor='delivery'>Доставка курьером</Label>
+                  <Label htmlFor='delivery'>Courier delivery</Label>
                 </RadioDiv>
-                <Input className='mt-5' id='city' label='Город*' placeholder='Выберите город' />
-                <Input className='mt-5' id='street' label='Улица*' placeholder='Выберите улицу' />
+                <Input className='mt-5' id='city' label='City*' placeholder='Choose the City' />
+                <Input className='mt-5' id='street' label='Street*' placeholder='Choose the street' />
                 <div className="flex flex-wrap justify-between w-full gap-x-7">
-                  <Input className='mt-5 basis-[calc(50%-1.75rem)] sm:basis-[calc(33.333%-3.5rem)] md:basis-[calc(33.333%-1.2rem)] md:shrink-0 grow' id='page' label='Корп/стр' placeholder='Корп/стр' />
-                  <Input className='mt-5 basis-[calc(50%-1.75rem)] sm:basis-[calc(33.333%-3.5rem)] md:basis-[calc(33.333%-1.2rem)] md:shrink-0 grow' id='building' label='Дом' placeholder='Дом' />
-                  <Input className='mt-5 basis-[calc(50%-1.75rem)] sm:basis-[calc(33.333%-3.5rem)] md:basis-[calc(33.333%-1.2rem)] md:shrink-0 grow' id='appartment' label='Кв/офис' placeholder='Кв/офис' />
-                  <Input className='mt-5 basis-[calc(50%-1.75rem)] sm:basis-[calc(33.333%-3.5rem)] md:basis-[calc(33.333%-1.2rem)] md:shrink-0 grow sm:grow-0' id='appartment' label='Время доставки' placeholder='__/__' />
+                  <Input className='mt-5 basis-[calc(50%-1.75rem)] sm:basis-[calc(33.333%-3.5rem)] md:basis-[calc(33.333%-1.2rem)] md:shrink-0 grow' id='page' label='Bldg/str' placeholder='Bldg/str' />
+                  <Input className='mt-5 basis-[calc(50%-1.75rem)] sm:basis-[calc(33.333%-3.5rem)] md:basis-[calc(33.333%-1.2rem)] md:shrink-0 grow' id='building' label='House' placeholder='House' />
+                  <Input className='mt-5 basis-[calc(50%-1.75rem)] sm:basis-[calc(33.333%-3.5rem)] md:basis-[calc(33.333%-1.2rem)] md:shrink-0 grow' id='appartment' label='Apt./office' placeholder='Apt./office' />
+                  <Input className='mt-5 basis-[calc(50%-1.75rem)] sm:basis-[calc(33.333%-3.5rem)] md:basis-[calc(33.333%-1.2rem)] md:shrink-0 grow sm:grow-0' id='delivery_time' label='Delivery time' placeholder='__/__' />
                 </div>
                 <p className="text-[#555] font-oswald font-normal text-sm leading-normal tracking-[0.04em] uppercase mt-5">
-                  Стоимость доставки 0 ₽
+                  Delivery cost: 0 ₽
                 </p>
-                <SectionTitleSm className='mt-[3.75rem] mb-4'>Доставка</SectionTitleSm>
+                <SectionTitleSm className='mt-[3.75rem] mb-4'>Payment</SectionTitleSm>
                 <RadioDiv className={`mb-4 ${radios2InView ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
                   <Radio defaultChecked type='radio' name="payment" id='bank_card' className="peer" />
                   <Circle />
-                  <Label htmlFor='bank_card'>Банковская карта</Label>
+                  <Label htmlFor='bank_card'>bank card</Label>
                 </RadioDiv>
                 <RadioDiv className={`mb-4 ${radios2InView ? 'delay-100 translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
                   <Radio type='radio' name="payment" id='cash' className="peer" />
                   <Circle />
-                  <Label htmlFor='cash'>Наличными</Label>
+                  <Label htmlFor='cash'>cash</Label>
                 </RadioDiv>
                 <RadioDiv className={`mb-4 ${radios2InView ? 'delay-200 translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
                   <Radio type='radio' name="payment" id='apple_pay' className="peer" />
@@ -178,30 +177,32 @@ const Checkout = () => {
                 <RadioDiv className={`mb-4 ${radios2InView ? 'delay-[.4s] translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
                   <Radio type='radio' name="payment" id='crypto' className="peer" />
                   <Circle />
-                  <Label htmlFor='crypto'>Криптовалюта</Label>
+                  <Label htmlFor='crypto'>cryptocurrency</Label>
                 </RadioDiv>
                 <RadioDiv className={`mb-4 ${radios2InView ? 'delay-500 translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
                   <Radio type='radio' name="payment" id='what' className="peer" />
                   <Circle />
-                  <Label htmlFor='what'>С расчетного счета</Label>
+                  <Label htmlFor='what'>from current account</Label>
                 </RadioDiv>
-                <SectionTitleSm lowercase className='mt-[3.75rem] mb-1'>Промокод</SectionTitleSm>
+                <SectionTitleSm lowercase className='mt-[3.75rem] mb-1'>Promocode</SectionTitleSm>
                 <Promo>
-                  <Input noLabel id='promocode' label='Промокод' placeholder='Промокод' />
+                  <Input noLabel id='promocode' label='Promocode' placeholder='Promocode' />
                   <PromoButton ref={promoRef} className={promoBtnInView ? 'delay-200 translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}
-                    onClick={() => dispatch(setSummary(document.querySelector('#promocode').value))}>Применить</PromoButton>
+                    onClick={() => dispatch(setSummary(document.querySelector('#promocode').value))}>Apply</PromoButton>
                 </Promo>
                 <Sum className="flex justify-between gap-12">
-                  <span>Общая сумма заказа</span>
+                  <span>Order total price</span>
                   <span>
                     {priceDisplayer(sum)}
                   </span>
                 </Sum>
-                <SectionText className={textInView ? 'translate-x-0 opacity-100' : 'translate-x-6 opacity-0'}>Скидка = 0 ₽</SectionText>
-                <SectionText className={textInView ? 'delay-200 translate-x-0 opacity-100' : 'translate-x-6 opacity-0'} ref={textRef}>Доставка = 0 ₽</SectionText>
-                <LinkPrimary className={btnInView ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'} ref={btnRef} to='/summary'>К оплате</LinkPrimary>
+                <SectionText className={textInView ? 'translate-x-0 opacity-100' : 'translate-x-6 opacity-0'}>Discount = 0 ₽</SectionText>
+                <SectionText className={textInView ? 'delay-200 translate-x-0 opacity-100' : 'translate-x-6 opacity-0'} ref={textRef}>Delivery = 0 ₽</SectionText>
+                <LinkPrimary className={btnInView ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'} ref={btnRef} to='/summary'>pay to order</LinkPrimary>
                 <Little ref={littleRef} className={littleInView ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}>
-                  Нажимая  на кнопку «К Оплате», я даю свое согласие на обработку персональных данных, в соответствии с <a href="#" className="text-pink-300">Политикой{'\u00a0'}конфиденциальности,</a> а так же ознакомлен с условиями оплаты и доставки
+                  By clicking on the “To Payment” button, I agree to the processing of personal data in accordance with the
+                  {' '}<a href="#" className="font-normal text-pink-300 underline">Privacy&nbsp;Policy</a> and have also read the terms of payment and delivery.
+
                   <Sign customText="Payment" className='
                     absolute
                     -bottom-14 sm:-bottom-8 lg:-bottom-2
@@ -213,14 +214,14 @@ const Checkout = () => {
               </Form>
             </Left>
             <Right>
-              <SectionTitleSm>Ваш заказ:</SectionTitleSm>
+              <SectionTitleSm>Your order:</SectionTitleSm>
               <div className="border-t border-[#555] mt-[2.8125em]">
                 {cartList.map(item => (
                   <CartItem id={item.id} amount={item.amount} additional={item.additional} />
                 ))}
               </div>
               <SectionTitleSm className='mt-5'>
-                Предварительный итог: {' '}
+                Preliminary cost: {' '}
                 {priceDisplayer(sum)}
               </SectionTitleSm>
             </Right>

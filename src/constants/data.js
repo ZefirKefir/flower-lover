@@ -3,210 +3,202 @@ import images from "./images";
 const data = {
   flowers: [
     {
-      name: 'Альстромерия',
+      name: 'Alstroemeria',
       id: 34522,
     },
     {
-      name: 'Ромашка',
+      name: 'Chamomile',
       id: 56311,
     },
     {
-      name: 'Гипсофила',
+      name: 'Gypsophila',
       id: 99274,
     },
     {
-      name: 'Антуриум',
+      name: 'Anthurium',
       id: 75314,
     },
     {
-      name: 'Астильба',
+      name: 'Astilbe',
       id: 84652,
     },
     {
-      name: 'Диантус',
+      name: 'Dianthus',
       id: 72552,
     },
     {
-      name: 'Озомантус',
-      id: 79812,
-    },
-    {
-      name: 'Роза',
+      name: 'Rose',
       id: 12457,
     },
     {
-      name: 'Эустома',
+      name: 'Eustoma',
       id: 99997,
     },
     {
-      name: 'Аспарагус',
+      name: 'Asparagus',
       id: 34812,
     },
     {
-      name: 'Хризантема',
+      name: 'Chrysanthemum',
       id: 81956,
     },
     {
-      name: 'Гвоздика',
+      name: 'Carnation',
       id: 10670,
     },
     {
-      name: 'Астранция',
+      name: 'Astrantia',
       id: 19553,
     },
     {
-      name: 'Пион',
+      name: 'Peony',
       id: 51922,
     },
     {
-      name: 'Астрофитум',
+      name: 'Astrophytum',
       id: 12953,
     },
     {
-      name: 'Ацидантера',
+      name: 'Acidanthera',
       id: 21122,
     },
     {
-      name: 'Бакопа',
+      name: 'Bacopa',
       id: 24625,
     },
     {
-      name: 'Василёк',
+      name: 'Cornflower',
       id: 39991,
     },
     {
-      name: 'Вероника',
+      name: 'Veronica',
       id: 39993,
     },
     {
-      name: 'Лизиантус',
+      name: 'Lisianthus',
       id: 39211,
     },
     {
-      name: 'Бонсай',
+      name: 'Bonsai',
       id: 39219,
     },
     {
-      name: 'Гардения',
+      name: 'Gardenia',
       id: 18528,
     },
     {
-      name: 'Георгин',
+      name: 'Dahlia',
       id: 26592,
     },
     {
-      name: 'Гипоэстес',
+      name: 'Hypoestes',
       id: 18335,
     },
     {
-      name: 'Гортензия',
+      name: 'Hydrangea',
       id: 35113,
     },
     {
-      name: 'Гиморфотека',
+      name: 'Hymorphotheca',
       id: 28812,
     },
     {
-      name: 'Хиперикум',
+      name: 'Hypericum',
       id: 41311,
     },
     {
-      name: 'Фрезия',
+      name: 'Freesia',
       id: 38564,
     },
     {
-      name: 'Сильва Пинк',
+      name: 'Silva Pink',
       id: 41535,
     },
     {
-      name: 'Озомантус',
+      name: 'Ozomanthus',
       id: 12385,
     },
     {
-      name: 'Жасмин',
+      name: 'Jasmine',
       id: 21833,
     },
     {
-      name: 'Ирис',
+      name: 'Iris',
       id: 23411,
     },
     {
-      name: 'Калибрахоа',
+      name: 'Calibrachoa',
       id: 41231,
     },
     {
-      name: 'Колеус',
+      name: 'Coleus',
       id: 21522,
     },
     {
-      name: 'Лилия',
+      name: 'Lily',
       id: 12991,
     },
     {
-      name: 'Магнолия',
+      name: 'Magnolia',
       id: 15666,
     },
     {
-      name: 'Нарцисс',
+      name: 'Narcissus',
       id: 12888,
     },
     {
-      name: 'Нерине',
+      name: 'Nerine',
       id: 21882,
     },
     {
-      name: 'Эквалипт',
+      name: 'Equalipt',
       id: 22199,
     },
     {
-      name: 'Сирень',
+      name: 'Lilac',
       id: 28555,
     },
     {
-      name: 'Тюльпан',
+      name: 'Tulip',
       id: 28814,
     },
     {
-      name: 'Подсолнух',
+      name: 'Sunflower',
       id: 21413,
     },
     {
-      name: 'Эрингиум',
+      name: 'Eringium',
       id: 12511,
     },
     {
-      name: 'Вакс',
+      name: 'Wax',
       id: 28128,
     },
     {
-      name: 'Матиола',
+      name: 'Matiola',
       id: 28105,
     },
     {
-      name: 'Калла',
+      name: 'Calla',
       id: 12877,
     },
     {
-      name: 'Статица',
+      name: 'Statica',
       id: 23412,
     },
     {
-      name: 'Гиперикум',
-      id: 21182,
-    },
-    {
-      name: 'Орхидея',
+      name: 'Orchid',
       id: 12177,
     },
     {
-      name: 'Лаванда',
+      name: 'Lavender',
       id: 37667,
     },
   ],
   products: [
     {
       id: 'FMAA1S',
-      name: 'Альстромерия',
+      name: 'Alstroemeria',
       format: 'bouquet',
       categories: ['soft', 'pink', 'mono'],
       rating: 7.6,
@@ -225,7 +217,7 @@ const data = {
     },
     {
       id: 'BQZ9W8',
-      name: 'Мерида',
+      name: 'Merida',
       format: 'bouquet',
       categories: ['soft', 'light', 'mixed', 'chamomile', 'vase', 'collecto'],
       rating: 6.9,
@@ -237,7 +229,7 @@ const data = {
     },
     {
       id: 'Y1JB95',
-      name: 'Букет невесты Будапешт',
+      name: 'Wedding bouquet "Budapesht"',
       format: 'bouquet',
       categories: ['soft', 'light', 'gypsophila', 'orange', 'pink', 'holiday', 'collecto'],
       rating: 8.5,
@@ -263,19 +255,19 @@ const data = {
     },
     {
       id: 'HFVARV',
-      name: 'Балерина',
+      name: 'Ballerina',
       format: 'bouquet',
       categories: ['mixed', 'soft', 'light', 'gypsophila', 'vase', 'composition', 'collecto'],
       rating: 8.1,
       feature: '',
       price: 4000,
       src: images.products.product4,
-      flowers_id: [99274, 75314, 84652, 12457, 79812, 72552],
+      flowers_id: [99274, 75314, 84652, 12457, 12385, 72552],
       reviews: [],
     },
     {
       id: 'T13DST',
-      name: 'Любовь',
+      name: 'Love',
       format: 'bouquet',
       categories: ['mixed', 'soft', 'light', 'pink', 'chrysanthemum', 'collecto', 'holiday', 'composition', 'popular'],
       rating: 8.7,
@@ -294,7 +286,7 @@ const data = {
     },
     {
       id: '063NYB',
-      name: 'Ветерок в облаках',
+      name: 'Wind beneath the clouds',
       format: 'bouquet',
       categories: ['soft', 'light', 'pink', 'mono', 'popular'],
       rating: 8.7,
@@ -319,7 +311,7 @@ const data = {
     },
     {
       id: 'P2YRDJ',
-      name: 'Астрофитум в горшке',
+      name: 'Astrophytum in a pot',
       format: 'vase',
       categories: ['yellow', 'green', 'vase', 'dried'],
       rating: 6.7,
@@ -331,7 +323,7 @@ const data = {
     },
     {
       id: 'KIMC7C',
-      name: 'Ацидантера',
+      name: 'Acidanthera',
       format: 'vase',
       categories: ['white', 'light',],
       rating: 6.9,
@@ -343,7 +335,7 @@ const data = {
     },
     {
       id: 'X65GJL',
-      name: 'Бакопа',
+      name: 'Bacopa',
       format: 'basket',
       categories: ['white', 'light', 'mono', 'popular'],
       rating: 7.7,
@@ -362,7 +354,7 @@ const data = {
     },
     {
       id: 'FW72RE',
-      name: 'Корзина Васильков',
+      name: 'Basket of cornflowers',
       format: 'basket',
       categories: ['soft', 'blue', 'mono'],
       rating: 6.4,
@@ -374,7 +366,7 @@ const data = {
     },
     {
       id: 'GUEHRY',
-      name: 'Йеннифер',
+      name: 'Yennefer',
       format: 'bouquet',
       categories: ['soft', 'mixed', 'pink', 'violet', 'yellow', 'collecto', 'composition'],
       rating: 7.9,
@@ -393,7 +385,7 @@ const data = {
     },
     {
       id: 'CMD3M2',
-      name: 'Мэнэбу',
+      name: 'Manebu',
       format: 'box',
       categories: ['green', 'vase', 'dried'],
       rating: 8.0,
@@ -412,7 +404,7 @@ const data = {
     },
     {
       id: '1K7JAC',
-      name: 'Пинк Кьюти',
+      name: 'Bouquet "Pink Beauty"',
       format: 'bouquet',
       categories: ['soft', 'pink', 'mono', 'popular'],
       rating: 8.3,
@@ -437,7 +429,7 @@ const data = {
     },
     {
       id: 'UDKGTR',
-      name: 'Георгин',
+      name: 'Georgin',
       format: 'bouquet',
       categories: ['soft', 'light', 'white', 'pink', 'red', 'mixed', 'mono', 'composition', 'popular'],
       rating: 8.8,
@@ -456,7 +448,7 @@ const data = {
     },
     {
       id: '7M3XV3',
-      name: 'Гипоэстес',
+      name: 'Hypoestes',
       format: 'vase',
       categories: ['pink', 'vase'],
       rating: 7.7,
@@ -468,7 +460,7 @@ const data = {
     },
     {
       id: 'EP3V1I',
-      name: 'Письмо любви',
+      name: 'Love Letter',
       format: 'envelope',
       categories: ['pink', 'yellow', 'soft', 'light', 'mixed', 'envelope', 'mono', 'holiday', 'popular'],
       rating: 8.2,
@@ -487,7 +479,7 @@ const data = {
     },
     {
       id: 'EZ0M04',
-      name: 'День матери',
+      name: "Mother's Day",
       format: 'bouquet',
       categories: ['pink', 'blue', 'soft', 'light', 'collecto', 'holiday', 'composition', 'popular'],
       rating: 8.1,
@@ -506,7 +498,7 @@ const data = {
     },
     {
       id: 'A2OVVU',
-      name: 'Диморфотечный ящик счастья',
+      name: 'Dimorphic happy box',
       format: 'box',
       categories: ['white'],
       rating: 7.3,
@@ -518,7 +510,7 @@ const data = {
     },
     {
       id: 'XDIN8H',
-      name: 'Женское сердце',
+      name: 'Heart of Woman',
       format: 'bouquet',
       categories: ['soft', 'light', 'pink', 'mixed', 'collecto', 'holiday', 'composition', 'popular'],
       rating: 7.7,
@@ -531,7 +523,7 @@ const data = {
     },
     {
       id: 'HSUWQ8',
-      name: 'Жасмин',
+      name: 'Jasmine',
       format: 'box',
       categories: ['soft', 'white', 'vase', 'mono'],
       rating: 8.0,
@@ -543,7 +535,7 @@ const data = {
     },
     {
       id: 'ID2QR5',
-      name: 'Свадебный букет с ирисами',
+      name: 'Iris wedding boquet',
       format: 'bouquet',
       categories: ['soft', 'violet', 'white', 'mixed', 'collecto', 'holiday'],
       rating: 7.0,
@@ -562,7 +554,7 @@ const data = {
     },
     {
       id: 'PS20OX',
-      name: 'Калибрахоа',
+      name: 'Calibrachoa',
       format: 'vase',
       categories: ['violet', 'vase'],
       rating: 6.0,
@@ -574,7 +566,7 @@ const data = {
     },
     {
       id: 'FFX3CW',
-      name: 'Колеус',
+      name: 'Coleus',
       format: 'vase',
       categories: ['green', 'vase'],
       rating: 7.0,
@@ -586,7 +578,7 @@ const data = {
     },
     {
       id: '9VBO6O',
-      name: 'Розы да лилии',
+      name: 'Roses and lilies',
       format: 'bouquet',
       categories: ['soft', 'light', 'pink', 'mixed', 'holiday'],
       rating: 7.8,
@@ -599,7 +591,7 @@ const data = {
     },
     {
       id: 'WS4T8X',
-      name: 'Повседневная радость',
+      name: 'Joy of Everyday',
       format: 'bouquet',
       categories: ['soft', 'mixed', 'red', 'pink', 'collecto', 'composition', 'popular'],
       rating: 8.1,
@@ -611,7 +603,7 @@ const data = {
     },
     {
       id: '596EQ0',
-      name: 'Нарциссова красота',
+      name: 'Beauty of Narcissus',
       format: 'bouquet',
       categories: ['soft', 'light', 'yellow', 'mono', 'popular'],
       rating: 8.1,
@@ -636,7 +628,7 @@ const data = {
     },
     {
       id: '56DTQA',
-      name: 'Роуз Мизэри',
+      name: 'Rose Misery',
       format: 'bouquet',
       categories: ['soft', 'light', 'yellow', 'pink', 'mixed', 'collecto'],
       rating: 7.9,
@@ -648,7 +640,7 @@ const data = {
     },
     {
       id: 'BY2GLE',
-      name: 'На сиреневой луне',
+      name: 'On the lilac moon',
       format: 'bouquet',
       categories: ['soft', 'light', 'violet', 'mono', 'popular'],
       rating: 7.9,
@@ -660,7 +652,7 @@ const data = {
     },
     {
       id: '0WXWZP',
-      name: '11 тюльпанов',
+      name: '11 tulips',
       format: 'bouquet',
       categories: ['soft', 'light', 'violet', 'mono', 'popular'],
       rating: 8.0,
@@ -672,7 +664,7 @@ const data = {
     },
     {
       id: 'TYASS3',
-      name: 'Гармония',
+      name: 'Harmony',
       format: 'bouquet',
       categories: ['soft', 'light', 'yellow', 'blue', 'mixed', 'composition', 'collecto', 'holiday'],
       rating: 8.0,
@@ -691,7 +683,7 @@ const data = {
     },
     {
       id: 'WYSAUF',
-      name: 'Композиция «Angelique»',
+      name: 'Composition «Angelique»',
       format: 'hatbox',
       categories: ['soft', 'light', 'composition', 'pink', 'mono', 'roses'],
       rating: 7.2,
@@ -703,7 +695,7 @@ const data = {
     },
     {
       id: 'D1T71U',
-      name: 'Букет «Хейли»',
+      name: 'Bouquet «Haley»',
       format: 'bouquet',
       categories: ['soft', 'light', 'orange', 'mono', 'roses'],
       rating: 8.9,
@@ -735,7 +727,7 @@ const data = {
     },
     {
       id: '4BZZQQ',
-      name: 'Розовые альстромерии в коробке',
+      name: 'pink alstroemerias in a hatbox',
       format: 'hatbox',
       categories: ['soft', 'light', 'pink', 'mono', 'holiday', 'popular'],
       rating: 8.3,
@@ -747,7 +739,7 @@ const data = {
     },
     {
       id: '9FN7L6',
-      name: 'Послание с неба',
+      name: 'Heaven Message',
       format: 'bouquet',
       categories: ['soft', 'light', 'blue', 'chrysanthemum', 'mono', 'holiday', 'composition', 'popular'],
       rating: 8.3,
@@ -766,7 +758,7 @@ const data = {
     },
     {
       id: 'NZ8ZYT',
-      name: 'Композиция «Пандора»',
+      name: 'Comosition «Pandora»',
       format: 'basket',
       categories: ['composition', 'soft', 'light', 'mixed', 'pink', 'blue', 'collecto', 'holiday'],
       rating: 7.7,
@@ -778,7 +770,7 @@ const data = {
     },
     {
       id: '64K8GK',
-      name: 'Радуга',
+      name: 'Rainbow',
       format: 'bouquet',
       categories: ['light', 'gypsophila', 'mixed', 'mono', 'holiday', 'popular'],
       rating: 8.7,
@@ -803,7 +795,7 @@ const data = {
     },
     {
       id: 'HP12HI',
-      name: 'Нежный комплимент',
+      name: 'Gentle compliment',
       format: 'bouquet',
       categories: ['soft', 'mixed', 'pink', 'violet', 'mono', 'roses'],
       rating: 8.1,
@@ -815,7 +807,7 @@ const data = {
     },
     {
       id: 'O5RCN9',
-      name: 'Букет «Darling»',
+      name: 'Bouquet «Darling»',
       format: 'bouquet',
       categories: ['light', 'soft', 'pink', 'mono', 'popular'],
       rating: 8.1,
@@ -828,7 +820,7 @@ const data = {
     },
     {
       id: 'ERXPB8',
-      name: 'Ласковый взгляд',
+      name: 'Affectionate look',
       format: 'bouquet',
       categories: ['light', 'soft', 'white', 'mono', 'composition'],
       rating: 8.1,
@@ -840,19 +832,19 @@ const data = {
     },
     {
       id: '87B0V0',
-      name: 'Послание от бабочек',
+      name: 'Message from Butterflies',
       format: 'envelope',
       categories: ['soft', 'envelope', 'pink', 'mixed', 'chrysanthemum', 'collecto', 'holiday'],
       rating: 6.8,
       feature: '',
       price: 3500,
       src: images.products.product40,
-      flowers_id: [12457, 22199, 72552, 81956, 21182, 23412],
+      flowers_id: [12457, 22199, 72552, 81956, 41311, 23412],
       reviews: [],
     },
     {
       id: 'L4U579',
-      name: 'Норд Верона',
+      name: 'Nord Verona',
       format: 'bouquet',
       categories: ['soft', 'mixed', 'blue', 'white', 'pink', 'mono', 'composition', 'popular'],
       rating: 8.8,
@@ -877,7 +869,7 @@ const data = {
     },
     {
       id: '4L5QFC',
-      name: 'Норд Верона XL',
+      name: 'Nord Verona XL',
       format: 'bouquet',
       categories: ['soft', 'mixed', 'blue', 'white', 'pink', 'mono', 'composition'],
       rating: 8.2,
@@ -889,7 +881,7 @@ const data = {
     },
     {
       id: '4JC6FM',
-      name: 'Улыбка',
+      name: 'Smile',
       format: 'bouquet',
       categories: ['soft', 'light', 'pink', 'mono', 'popular'],
       rating: 6.6,
@@ -901,7 +893,7 @@ const data = {
     },
     {
       id: 'AA1SBQ',
-      name: 'Вишнёвая магия',
+      name: 'Cherry Blossom',
       format: 'hatbox',
       categories: ['soft', 'light', 'pink', 'red', 'mixed', 'collecto', 'composition'],
       rating: 7.7,
@@ -913,7 +905,7 @@ const data = {
     },
     {
       id: 'Z9W8Y1',
-      name: 'Мия',
+      name: 'Mia',
       format: 'bouquet',
       categories: ['soft', 'light', 'mixed', 'white', 'pink', 'collecto', 'composition'],
       rating: 8.5,
@@ -925,7 +917,7 @@ const data = {
     },
     {
       id: 'JB95HF',
-      name: 'Фиолетовая белизна',
+      name: 'Violet softness',
       format: 'bouquet',
       categories: ['violet', 'white', 'mixed', 'soft', 'mono'],
       rating: 7.4,
@@ -937,7 +929,7 @@ const data = {
     },
     {
       id: 'VARVT1',
-      name: 'Лавандовая прохлада',
+      name: 'Lavender coolness',
       format: 'bouquet',
       categories: ['violet', 'collecto', 'mono'],
       rating: 5.9,
@@ -949,7 +941,7 @@ const data = {
     },
     {
       id: '3DST06',
-      name: 'Тюльпаны с лавандой',
+      name: 'Tulips with Lavender',
       format: 'bouquet',
       categories: ['violet', 'pink', 'mixed', 'light', 'mono'],
       rating: 7.0,
@@ -961,7 +953,7 @@ const data = {
     },
     {
       id: '3NYBP2',
-      name: 'Орхидеи Ультрамарин',
+      name: 'Orchids Ultramarine',
       format: 'bouquet',
       categories: ['violet', 'mono'],
       rating: 8.0,
@@ -973,7 +965,7 @@ const data = {
     },
     {
       id: 'YRDJKI',
-      name: 'Монобукет с 15-ю ирисами',
+      name: 'Mono bouquet with 14 irises',
       format: 'bouquet',
       categories: ['violet', 'mono', 'popular'],
       rating: 7.1,
@@ -984,163 +976,134 @@ const data = {
       flowers_id: [23411],
       reviews: [],
     },
-
-    // {
-    //   id: 'MC7CX6',
-    //   name: 'Carnation',
-    //   price: 2000,
-    //   src: images.flower1,
-    //   feature: 'new',
-    // },
-    // {
-    //   id: '5GJLFW',
-    //   name: 'Orchid',
-    //   price: 1500,
-    //   src: images.flower2,
-    //   feature: '',
-    // },
-    // {
-    //   id: '72REGU',
-    //   name: 'Lily',
-    //   price: 3000,
-    //   src: images.flower3,
-    //   feature: '',
-    // },
-    // {
-    //   id: 'EHRYCM',
-    //   name: 'Rose',
-    //   price: 1000,
-    //   src: images.flower4,
-    //   feature: 'sale',
-    // },
   ],
 
   categories: [
     {
       name: 'gypsophila',
-      displayName: 'Букеты из гипсофил',
+      displayName: 'Bouquets of gypsophila',
     },
     {
       name: 'chamomile',
-      displayName: 'Букеты из ромашек',
+      displayName: 'Bouquets of daisies',
     },
     {
       name: 'chrysanthemum',
-      displayName: 'Букеты из хризантем',
+      displayName: 'Bouquets of chrysanthemums',
     },
     {
       name: 'vase',
-      displayName: 'Комнатные цветы в горшках',
+      displayName: 'Indoor flowers in pots',
     },
     {
       name: 'mono',
-      displayName: 'Монобукеты',
+      displayName: 'Mono bouquets',
     },
     {
       name: 'collecto',
-      displayName: 'Сборные букеты',
+      displayName: 'Prefabricated bouquets',
     },
     {
       name: 'holiday',
-      displayName: 'Букет на праздник',
+      displayName: 'Holiday bouquets',
     },
     {
       name: 'composition',
-      displayName: 'Композиции из цветов',
+      displayName: 'Flower compositions',
     },
     {
       name: 'envelope',
-      displayName: 'Конверты',
+      displayName: 'Envelopes',
     },
     {
       name: 'postcard',
-      displayName: 'Открытки',
+      displayName: 'Postcards',
     },
     {
       name: 'present',
-      displayName: 'Подарки',
+      displayName: 'Gifts',
     },
     {
       name: 'dried',
-      displayName: 'Букеты из сухоцветов',
+      displayName: 'Bouquets of dried flowers',
     },
     {
       name: 'balloons',
-      displayName: 'Шары',
+      displayName: 'Balloons',
     },
     {
       name: 'popular',
-      displayName: 'Популярное',
+      displayName: 'Popular',
     },
     {
       name: 'roses',
-      displayName: 'Букеты роз',
+      displayName: 'Bouquets of roses',
     },
     {
       name: 'funeral',
-      displayName: 'Цветы на похороны',
+      displayName: 'Flowers for funerals',
     },
     {
       name: 'package',
-      displayName: 'Упаковка подарков',
+      displayName: 'Gift package',
     },
   ],
 
   additional: [
     {
       name: 'fertilizer',
-      title: 'Удобрения для срезанных цветов',
-      descr: 'При указании об этом в пожеланиях к букету, мы приложим пакетик удобрения для вас',
+      title: 'Fertilizers for cut flowers',
+      descr: 'If you indicate this in your wishes for the bouquet, we will include a bag of fertilizer for you.',
       price: 500,
     },
     {
       name: 'signature',
-      title: 'подпишем открытку',
-      descr: 'В пожеланиях к букету укажите текст, какой хотите разместить и выберите на сайте саму открытку',
+      title: 'sign the postcard',
+      descr: 'In your wishes for the bouquet, indicate the text you want to place and select the card itself on the website/',
       price: 1,
     },
     {
       name: 'photo',
-      title: 'Фото букета перед отправкой',
-      descr: 'В примечании к заказу укажите об этом и мы отправим фото готового букета перед доставкой. В праздничные дни в связи с большой загруженностью такой возможности нет',
+      title: 'Bouquet photosession',
+      descr: 'Please indicate this in the notes to your order and we will send a photo of the finished bouquet before delivery. On holidays due to heavy workload this is not possible.',
       price: 250,
     },
     {
       name: 'surprise',
-      title: 'Букет-сюрприз',
-      descr: 'Если хотите, чтобы получатель не знал, что ему вручат а также от кого, то укажите об этом в примечании к заказу',
+      title: 'Bouquet-surprise',
+      descr: 'If you want the recipient not to know what he will be given and from whom, please indicate this in the notes to the order.',
       price: 750,
     },
   ],
 
   faq: [
     {
-      title: 'БУДЕТ ЛИ ЗАКАЗАННЫЙ БУКЕТ В ТОЧНОСТИ СООТВЕТСТВОВАТЬ ЕГО ИЗОБРАЖЕНИЮ НА САЙТЕ?',
-      descr: 'Букет собирается по индивидуальной матрице букета. Однако возможны случаи, когда нет необходимых цветов либо имеющиеся цветы отличаются от представленных на фото, и с согласования заказчика они могут быть заменены на аналогичные. Либо если флорист считает, что данные изменения не повлекут сильного изменения в образе букета, то самостоятельно может заменить некоторые цветы. И перед отправкой направляется фото заказчику, который утверждает получившийся букет. Каждый цветок отличается от другого, как и каждый букет будет индивидуальным, но в этом и есть его прелесть… в индивидуальности.',
+      title: 'WILL THE ORDERED BOUQUET EXACTLY CORRESPOND TO ITS PICTURE ON THE SITE?',
+      descr: 'The bouquet is assembled according to an individual bouquet matrix. However, there may be cases when the required colors are not available or the available flowers differ from those shown in the photo, and with the approval of the customer they can be replaced with similar ones. Or, if the florist believes that these changes will not lead to a significant change in the image of the bouquet, then he can replace some of the flowers himself. And before sending, the photo is sent to the customer, who approves the resulting bouquet. Each flower is different from the other, just as each bouquet will be individual, but this is its charm... individuality.',
     },
     {
-      title: 'КАК ДОЛГО СТОЯТ БУКЕТЫ ИЗ СУХОЦВЕТОВ?',
-      descr: 'Букеты из сухоцветов могут радовать глаз в течение продолжительного времени — от нескольких месяцев до нескольких лет.Длительность сохранения зависит от тщательности обращения, места хранения и качества самих сухоцветов.Соблюдение правильных условий может значительно продлить их привлекательность и свежесть.',
+      title: 'HOW LONG DO BOUQUETS OF DRIED FLOWERS LAST?',
+      descr: 'Bouquets of dried flowers can please the eye for a long time - from several months to several years. The duration of preservation depends on the care of handling, storage location and the quality of the dried flowers themselves. Observance of the right conditions can significantly prolong their attractiveness and freshness.',
     },
     {
-      title: 'ДЕЛАЕТЕ ЛИ ВЫ ФОТО ГОТОВОГО БУКЕТА ПЕРЕД ОТПРАВКОЙ?',
-      descr: 'Да, конечно, мы готовы предоставить вам фотографию готового букета перед его отправкой. Мы понимаем, что важно иметь четкое представление о том, какой букет будет доставлен. Это дает вам возможность увидеть букет во всей его красе и удостовериться, что он соответствует вашим ожиданиям. Наша цель - обеспечить прозрачность и качество в каждом заказе.',
+      title: 'DO YOU TAKE A PHOTO OF THE READY BOUQUET BEFORE SHIPPING?',
+      descr: 'Yes, of course, we are ready to provide you with a photo of the finished bouquet before sending it. We understand that it is important to have a clear idea of ​​what kind of bouquet will be delivered. This gives you the opportunity to see the bouquet in all its glory and make sure it meets your expectations. Our goal is to provide transparency and quality in every order.',
     },
     {
-      title: 'А СКОЛЬКО ДОЛЖНЫ ПРОСТОЯТЬ ЦВЕТЫ В БУКЕТЕ?',
-      descr: 'Срок, на который цветы в букете могут продержаться свою свежесть, зависит от нескольких факторов, таких как типы цветов, условия хранения и ухода. В среднем, свежесть букета может сохраняться от нескольких дней до двух недель. Однако, есть цветы, которые дольше сохраняют свою свежесть, например, хризантемы, герберы, альстромерии, лилии. Регулярное обрезание стеблей, смена воды и избегание прямого солнечного света могут помочь продлить срок службы букета.',
+      title: 'HOW LONG SHOULD FLOWERS LAST IN A BOUQUET?',
+      descr: 'The length of time that flowers in a bouquet can maintain their freshness depends on several factors, such as types of flowers, storage and care conditions. On average, the freshness of a bouquet can last from several days to two weeks. However, there are flowers that retain their freshness longer, for example, chrysanthemums, gerberas, alstroemeria, and lilies. Regularly trimming the stems, changing the water, and avoiding direct sunlight can help extend the life of your bouquet.',
     },
     {
-      title: 'ЕСТЬ ЛИ ДОСТАВКА ЗА ПРЕДЕЛЫ МКАД?',
-      descr: 'Да, у нас предусмотрена услуга доставки за пределы МКАД. Мы рады предложить удобную и надежную доставку нашим клиентам в различные места, не ограничиваясь только Московской областью. Наша команда работает, чтобы ваш букет достиг вас в сохранности и свежести, независимо от расстояния.',
+      title: 'IS IT DELIVERY OUTSIDE THE MKAD?',
+      descr: 'Yes, we provide a delivery service outside the Moscow Ring Road. We are pleased to offer convenient and reliable delivery to our customers to various locations, not limited to the Moscow region. Our team works to ensure that your bouquet reaches you safe and fresh, regardless of the distance.',
     },
     {
-      title: 'КАК ОПРЕДЕЛИТЬ СВЕЖИЕ ЛИ ЦВЕТЫ?',
-      descr: 'Чтобы определить свежесть цветов, взгляните на лепестки и бутоны - они должны быть яркими и без пожелтений. Листья должны быть зелеными и без пятен, а запах - приятным. Стебли должны быть прочными, вода в вазе - чистой, а стебли обрезаны под углом. Избегайте цветов с поврежденными лепестками или сломанными стеблями. Эти простые признаки помогут определить, насколько свежи цветы.',
+      title: 'HOW TO DETERMINE WHEN FLOWERS ARE FRESH?',
+      descr: 'To determine the freshness of flowers, look at the petals and buds - they should be bright and without yellowing. The leaves should be green and without spots, and the smell should be pleasant. The stems should be strong, the water in the vase should be clean, and the stems should be cut at an angle. Avoid flowers with damaged petals or broken stems. These simple signs will help determine how fresh the flowers are.',
     },
     {
-      title: 'ЧЕМ ОТЛИЧАЕТСЯ БЕЛОРУССКАЯ РОЗА ОТ ИМПОРТНОЙ?',
-      descr: 'Белорусская роза произрастает в Беларуси, что может влиять на её адаптацию к местным климатическим условиям. Импортные розы, с другой стороны, растут в разных странах с разнообразными климатами и почвами. Поэтому белорусские розы могут иметь определенную уникальность, а импортные розы могут быть разнообразными по цветам, размерам и ароматам в зависимости от их происхождения.',
+      title: 'WHAT IS THE DIFFERENCE BELARUSIAN ROSE FROM IMPORTED?',
+      descr: 'The Belarusian rose grows in Belarus, which may affect its adaptation to local climatic conditions. Imported roses, on the other hand, grow in different countries with varying climates and soils. Therefore, Belarusian roses can have a certain uniqueness, and imported roses can be varied in colors, sizes and scents, depending on their origin.',
     },
   ],
 }

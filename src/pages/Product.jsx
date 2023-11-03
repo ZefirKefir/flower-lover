@@ -116,10 +116,10 @@ const Product = () => {
         <div className='absolute rounded-full blur-[125px] animate-bubble-right-slow w-[800px] h-[200px] -bottom-[22.5em] left-[42.5%] bg-teal rotate-[21.1deg]' />
         <div className='absolute rounded-full blur-[125px] animate-bubble-right-slow w-[360px] h-[350px] -bottom-[15em] -right-[5%] bg-pink-800 rotate-[32.83deg]' />
         <Container>
-          <Path path={'/catalog,/catalog/product'} pathName={`Каталог, ${product.name}`} />
+          <Path path={'/catalog,/catalog/product'} pathName={`Catalog, ${product.name}`} />
           <BackLink className="flex mt-5 lg:hidden" to='/catalog'>
             <BsChevronLeft size={12} />
-            назад
+            back
           </BackLink>
           <ProductMain ref={ref}>
             <Left className={`duration-500 ease-in-out ${inView ? 'delay-200 translate-x-0 opacity-100' : '-translate-x-12 opacity-0'}`}>
@@ -182,7 +182,7 @@ const Product = () => {
             <Right>
               <BackLink className={`duration-500 ease-in-out hidden md:flex ${inView ? 'delay-200 translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`} to='/catalog'>
                 <BsChevronLeft size={12} />
-                назад
+                back
               </BackLink>
               <ProductTitle className={`duration-500 ease-in-out ${inView ? 'delay-300 translate-x-0 opacity-100' : 'translate-x-12 opacity-0'}`}>{product.name}</ProductTitle>
               <div className="flex gap-5">
@@ -195,17 +195,19 @@ const Product = () => {
               </div>
               <Block>
                 <Text className={`duration-500 ease-in-out ${inView ? 'delay-500 translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
-                  <span className="font-bold">Состав: </span>
+                  <span className="font-bold">Recipe: </span>
                   {flowers.join(', ')}
                 </Text>
               </Block>
               <Block>
                 <Text className={`duration-500 ease-in-out ${inView ? 'delay-[.55s] translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
-                  Завораживающая глубина ваших чувств передана огненными красками этого букета</Text>
+                  The description of the product with its benefits is located right here.
+                  the weather is really bad today, don't you think the same?
+                </Text>
               </Block>
               <Block>
                 <Descr className={`duration-500 ease-in-out ${inView ? 'delay-[.6s] translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
-                  <span className="font-bold">Категории: </span>
+                  <span className="font-bold">Categories: </span>
                   {categories.join(', ')}
                 </Descr>
               </Block>
@@ -216,7 +218,7 @@ const Product = () => {
                     additionalChecked.map((i, index) => i ? str += `/${data.additional[index].name}` : '')
                     for (let i = 0; i < amount; i++) dispatch(addToCart(str));
                   }}
-                >В корзину</ButtonOutlined>
+                >add to cart</ButtonOutlined>
                 <AmountButton>
                   <button className='px-2' onClick={() => (amount === 1) ? '' : setAmount(amount - 1)}>-</button>
                   <button>{amount}</button>
@@ -236,16 +238,19 @@ const Product = () => {
               </div>
               <Block>
                 <Text className={`duration-500 ease-in-out ${rightInView ? 'delay-200 translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>
-                  <span className="font-bold">Состав: </span>
+                  <span className="font-bold">Recipe: </span>
                   {flowers.join(', ')}
                 </Text>
               </Block>
               <Block>
-                <Text className={`duration-500 ease-in-out ${rightInView ? 'delay-300 translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>Завораживающая глубина ваших чувств передана огненными красками этого букета</Text>
+                <Text className={`duration-500 ease-in-out ${rightInView ? 'delay-300 translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>
+                  The description of the product with its benefits is located right here.
+                  the weather is really bad today, don't you think the same?
+                </Text>
               </Block>
               <Block>
                 <Descr className={`duration-500 ease-in-out ${rightInView ? 'delay-[.4s] translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>
-                  <span className="font-bold">Категории: </span>
+                  <span className="font-bold">Categories: </span>
                   {categories.join(', ')}
                 </Descr>
               </Block>
@@ -256,7 +261,7 @@ const Product = () => {
                     additionalChecked.map((i, index) => i ? str += `/${data.additional[index].name}` : '')
                     for (let i = 0; i < amount; i++) dispatch(addToCart(str));
                   }}
-                >В корзину</ButtonOutlined>
+                >add to cart</ButtonOutlined>
                 <AmountButton>
                   <button className='px-2' onClick={() => (amount === 1) ? '' : setAmount(amount - 1)}>-</button>
                   <button>{amount}</button>
@@ -267,7 +272,7 @@ const Product = () => {
           </ProductMain>
 
           <Additional>
-            <SectionSubtitle className='text-center'>Дополнительно к заказу:</SectionSubtitle>
+            <SectionSubtitle className='text-center'>Additional to the order:</SectionSubtitle>
             <Grid ref={gridRef}>
               {data.additional.map((item, index) => (
                 <ServiceCard className={`duration-500 ease-in-out
@@ -301,35 +306,37 @@ const Product = () => {
               <TabButton ref={buttonsRef} className={`duration-500 ease-in-out
               ${tab === 1 ? 'text-teal font-bold border-b-[3px] border-teal' : 'text-[#555] font-light border-b border-[#555]'}
               ${buttonsInView ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}
-              `} onClick={() => { setTab(1); localStorage.setItem('tabNr', 1) }}>доставка и оплата</TabButton>
+              `} onClick={() => { setTab(1); localStorage.setItem('tabNr', 1) }}>Delivery & Payment</TabButton>
               <TabButton className={`duration-500 ease-in-out
               ${tab === 2 ? 'text-teal font-bold border-b-[3px] border-teal' : 'text-[#555] font-light border-b border-[#555]'}
               ${buttonsInView ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}
-              `} onClick={() => { setTab(2); localStorage.setItem('tabNr', 2) }}>отзывы ({product.reviews.length})</TabButton>
+              `} onClick={() => { setTab(2); localStorage.setItem('tabNr', 2) }}>Reviews ({product.reviews.length})</TabButton>
             </SummaryButtons>
             <Tabs>
               <Prodback className={`duration-500 ease-in-out ${buttonsInView ? 'delay-500 translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`} src={images.productBack} />
               <Delivery className={tab === 1 ? 'block' : 'hidden'}>
-                <InfoTitle className='mb-5'>Способы оплаты:</InfoTitle>
+                <InfoTitle className='mb-5'>Payment methods:</InfoTitle>
                 <List>
-                  <ListItem className="mb-2.5 md:mb-1.5 last:mb-0 w-[95%] md:w-3/4 lg:w-[70%]">БАНКОВСКОЙ КАРТОЙ ПРИ ОФОРМЛЕНИИ ЗАКАЗА ЧЕРЕЗ САЙТ</ListItem>
-                  <ListItem className="mb-2.5 md:mb-1.5 last:mb-0 w-[95%] md:w-3/4 lg:w-[70%]">НАЛИЧНЫМИ ИЛИ БАНКОВСКОЙ КАРТОЙ ПРИ САМОВЫВОЗЕ</ListItem>
-                  <ListItem className="mb-2.5 md:mb-1.5 last:mb-0 w-[95%] md:w-3/4 lg:w-[70%]">НАЛИЧНЫМИ ПРИ ДОСТАВКЕ КУРЬЕРОМ</ListItem>
-                  <ListItem className="mb-2.5 md:mb-1.5 last:mb-0 w-[95%] md:w-3/4 lg:w-[70%]">КРИПТОВАЛЮТОЙ ОНЛАЙН</ListItem>
+                  <ListItem className="mb-2.5 md:mb-1.5 last:mb-0 w-[95%] md:w-3/4 lg:w-[70%]">By a bank card if you order on website</ListItem>
+                  <ListItem className="mb-2.5 md:mb-1.5 last:mb-0 w-[95%] md:w-3/4 lg:w-[70%]">BY CASH OR BANK CARD FOR PICKUP</ListItem>
+                  <ListItem className="mb-2.5 md:mb-1.5 last:mb-0 w-[95%] md:w-3/4 lg:w-[70%]">by CASH ON DELIVERY BY COURIER</ListItem>
+                  <ListItem className="mb-2.5 md:mb-1.5 last:mb-0 w-[95%] md:w-3/4 lg:w-[70%]">by cryptocurrency</ListItem>
                 </List>
-                <InfoTitle className='mb-5'>стоимость доставки:</InfoTitle>
+                <InfoTitle className='mb-5'>Delivery cost:</InfoTitle>
                 <List>
-                  <ListItem className="mb-2.5 md:mb-1.5 last:mb-0 w-[95%] md:w-3/4 lg:w-[70%]"><span className="font-bold">Бесплатно</span> – при заказе на сумму <span className="text-teal">от 90 рублей</span></ListItem>
-                  <ListItem className="mb-2.5 md:mb-1.5 last:mb-0 w-[95%] md:w-3/4 lg:w-[70%]"><span className="font-bold">10 рублей</span> – при заказе на сумму <span className="text-teal">менее 90 рублей</span></ListItem>
-                  <ListItem className="mb-2.5 md:mb-1.5 last:mb-0 w-[95%] md:w-3/4 lg:w-[70%]">Возможность, сроки и стоимость доставки за пределы МКАД, доставки в ночное время, праздники <span className="text-teal">оговариваются с менеджером</span></ListItem>
-                  <ListItem className="mb-2.5 md:mb-1.5 last:mb-0 w-[95%] md:w-3/4 lg:w-[70%]">Так же вы можете забрать ваш заказ самостоятельно по адресу:<br />
-                    <span className="text-teal">г. Минск, ул. Тимирязева д. 67, комн. 112 ежедневно с 10.00 до 21.00</span></ListItem>
+                  <ListItem className="mb-2.5 md:mb-1.5 last:mb-0 w-[95%] md:w-3/4 lg:w-[70%]"><span className="font-bold">Free</span> – for orders <span className="text-teal">above 1900 RUB</span></ListItem>
+                  <ListItem className="mb-2.5 md:mb-1.5 last:mb-0 w-[95%] md:w-3/4 lg:w-[70%]"><span className="font-bold">500 RUB</span> – for orders <span className="text-teal">lower than 1900 RUB</span></ListItem>
+                  <ListItem className="mb-2.5 md:mb-1.5 last:mb-0 w-[95%] md:w-3/4 lg:w-[70%]">
+                    POSSIBILITY, TIME AND COST OF DELIVERY OUTSIDE THE MKAD, NIGHT DELIVERY, HOLIDAYS ARE <span className="text-teal">AGREED WITH THE&nbsp;MANAGER</span></ListItem>
+                  <ListItem className="mb-2.5 md:mb-1.5 last:mb-0 w-[95%] md:w-3/4 lg:w-[70%]">You can also pick up your order yourself under the address:<br />
+                    <span className="text-teal">Minsk, Timiryazeva St., Apt. 67, room. 112 everyday from 10.00 to 21.00</span></ListItem>
                 </List>
-                <InfoTitle className='mb-5'>Условия доставки:</InfoTitle>
+                <InfoTitle className='mb-5'>Delivery terms:</InfoTitle>
                 <p ref={descrRef} className={`text-sm md:text-xl font-light font-oswald leading-normal tracking-[0.02em] text-white uppercase
                   duration-500 ease-in-out ${descrInView ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}
-                `}>Доставка осуществляется по городу Минску в пределах МКАД <span className="text-teal">в любой день с 09.00 до 22.00.</span><br />
-                  Доставка в ночное время осуществляется по договоренности с оператором</p>
+                `}>DELIVERY IS CARRIED OUT IN THE CITY OF MINSK WITHIN THE MKAD <span className="text-teal">ANY DAY FROM 09.00 TO 22.00.</span><br />
+                  NIGHT DELIVERY IS CARRIED OUT BY AGREEMENT WITH THE OPERATOR
+                </p>
               </Delivery>
               <Reviews className={tab === 2 ? 'block' : 'hidden'}>
                 <div className={`${product.reviews.length === 0 ? 'md:mb-[3.75em]' : 'md:mb-[6.25em]'} mb-10`}>
@@ -341,18 +348,20 @@ const Product = () => {
                 </div>
                 <ReviewForm ref={formRef} action="#">
                   <FormText className={`mb-1 uppercase text-teal ${formInView ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>
-                    {product.reviews.length === 0 ? 'Будьте первым, кто оставил' : 'Оставьте свой'} отзыв на “{product.name}”
+                    {product.reviews.length === 0 ? 'Be the fist one to ' : 'Please, '} leave your for the “{product.name}”
                   </FormText>
-                  <FormText className={`mb-5 text-white ${formInView ? 'delay-100 translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>Ваш адрес email не будет опубликован. <span className='whitespace-nowrap'>Обязательные поля помечены *</span>
+                  <FormText className={`mb-5 text-white ${formInView ? 'delay-100 translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>
+                    Your email address will not be published. <span className='whitespace-nowrap'>Required fields are marked *</span>
                   </FormText>
-                  <FormText className={`mb-1 text-white ${formInView ? 'delay-200 translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>Ваша оценка:</FormText>
+                  <FormText className={`mb-1 text-white ${formInView ? 'delay-200 translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>Your rating:</FormText>
                   <Stars className={`duration-500 ease-in-out ${formInView ? 'delay-300 translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`} amount={revStar} setAmount={setRevStar} logic />
-                  <Input type="textarea" className='mt-5' id='review_text' label='Ваш отзыв*' placeholder='Введите комментарий' uppercase />
-                  <Input className='mt-5' id='reviewer_name' label='Имя*' placeholder='Введите ваше имя' uppercase />
-                  <Input type='email' className='mt-5' id='reviewer_email' label='E-mail*' placeholder='Введите вашу почту  ' uppercase />
-                  <ButtonPrimary className='mt-[1.875rem] mb-2.5' pX="5.75rem">отправить</ButtonPrimary>
-                  <SmallDescr ref={smallRef} className={`balance duration-500 ease-in-out ${smallInView ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>Нажимая  на кнопку «Отправить», я даю свое согласие на обработку персональных данных, в соответствии с
-                    <a href="#" className="text-pink-300 hover:underline"> Политикой конфиденциальности</a>
+                  <Input type="textarea" className='mt-5' id='review_text' label='Your review*' placeholder='Leave your opinion' uppercase />
+                  <Input className='mt-5' id='reviewer_name' label='Name*' placeholder='Your name' uppercase />
+                  <Input type='email' className='mt-5' id='reviewer_email' label='E-mail*' placeholder='Your email' uppercase />
+                  <ButtonPrimary className='mt-[1.875rem] mb-2.5' pX="5.75rem">Submit</ButtonPrimary>
+                  <SmallDescr ref={smallRef} className={`balance duration-500 ease-in-out ${smallInView ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>
+                    By submitting the form, I consent to the processing of personal data in accordance with the
+                    {' '}<a href="#" className="font-normal text-pink-300 underline">Privacy&nbsp;Policy</a>.
                   </SmallDescr>
                 </ReviewForm>
               </Reviews>
@@ -361,7 +370,7 @@ const Product = () => {
         </Container>
         <YouWouldLike className={tab === 1 ? 'mt-[6.25em]' : 'mt-[12.5em]'}>
           <Container>
-            <SectionHeading>вам может понравиться:</SectionHeading>
+            <SectionHeading>You may also like:</SectionHeading>
           </Container>
           <Slider className='mt-6'>
             {featured.map((item, index) => (

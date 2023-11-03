@@ -22,23 +22,25 @@ const SpecialOccasion = () => {
       <Container>
         <TitleFlex>
           <SectionTitle>
-            особенный
-            <TitleSpan>повод?</TitleSpan>
+            special
+            <TitleSpan>occasion?</TitleSpan>
           </SectionTitle>
           <TitleImg className={imgInView ? 'translate-x-0 opacity-100' : 'translate-x-14 opacity-0'} ref={imgRef} src={images.special1} />
         </TitleFlex>
         <Content ref={ref}>
           <Text>
-            <h6 className={`duration-300 ease-in-out ${inView ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>Мы готовы прийти на помощь и собрать уникальный букет, на любой вкус, бюджет и для любого события по вашему индивидуальному заказу.</h6>
+            <h6 className={`duration-300 ease-in-out ${inView ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
+              We are ready to help and put together a unique bouquet for every taste, budget and for any event according to your individual order.
+            </h6>
             <List>
-              <Item className={inView ? 'delay-100 translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}>учтем даже самые изысканные пожелания;</Item>
-              <Item className={inView ? 'delay-200 translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}>подберем свежайшие цветы и сделаем уникальный букет или композицию;</Item>
-              <Item className={inView ? 'delay-300 translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}>оплатить можно при получении или онлайн на сайте</Item>
+              <Item className={inView ? 'delay-100 translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}>we will take into account even the most sophisticated wishes</Item>
+              <Item className={inView ? 'delay-200 translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}>we will select the freshest flowers and make a unique bouquet or composition</Item>
+              <Item className={inView ? 'delay-300 translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}>You can pay upon receipt or online on the website</Item>
             </List>
             <ButtonPrimary pX="17px" className={`
               ml-[50%] sm:ml-0 group duration-500
               ${inView ? 'delay-500 -translate-x-1/2 sm:translate-x-0 opacity-100' : '-translate-x-1/3 opacity-0'}
-            `}>собрать индивидуальный букет
+            `}>collect an individual bouquet
               <ArrowCurled className="hidden md:block -left-8" src={images.icons.arrowCurled} />
               <ArrowCurled className="hidden xs:block -right-8 -scale-x-100 md:hidden" src={images.icons.arrowCurled} />
             </ButtonPrimary>
@@ -67,10 +69,10 @@ const TitleFlex = tw.div`
 `;
 const TitleSpan = tw.span`
   relative
-  block pl-24 md:pl-40 lg:pl-[3.875em]
+  block pl-16 md:pl-28 lg:pl-[1.5em]
   before:content-['']
-  before:absolute before:top-1/2 before:left-[8.5%]
-  before:h-px before:w-[23%]
+  before:absolute before:top-1/2 before:left-[5.5%]
+  before:h-px before:w-[12.5%]
   before:bg-pink-300
 `;
 const TitleImg = tw.img`

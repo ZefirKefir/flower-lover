@@ -52,32 +52,28 @@ const Summary = () => {
           <SuccessBack ref={img1Ref} className={img1InView ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'} src={images.successBack} />
           <Container>
             <SectionTitleCustom nextClassName="
-              block sm:inline,sm:inline
-              flex items-center gap-7
-              before:content-['']
-              before:w-[1em] before:h-px
-              before:bg-pink-300,
+              block sm:inline,
+              
               ml-[1em]
               flex items-center gap-[.5em]
               before:hidden
               before:content-['']
               sm:before:block
-              before:w-[3.5em] before:h-px
+              before:w-[1.5em] before:h-px
               before:bg-pink-300
             "
               className="lg:whitespace-nowrap mt-[5vh] lg:mt-20"
             >
-              <>Оплата {' '}</>
-              <>прошла</>
-              <>успешно!</>
+              <>Order is {' '}</>
+              <>paid!</>
             </SectionTitleCustom>
             <Details ref={details1Ref} className="md:ml-[6.25rem] w-3/4 md:w-1/2 relative">
-              <DetailsP className={`mt-2.5 md:mt-5 ${details1InView ? 'delay-100 translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>Ваш номер заказа – {395808599}</DetailsP>
-              <DetailsP className={`mt-2 md:mt-5 ${details1InView ? 'delay-200 translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>Спасибо за заказ!<br />
-                <span className={`hidden md:block`}>Вы получите уведомление о статусе вашего заказа</span>
-                <span className={`md:hidden`}>Наш менеджер свяжется с вами в течении 15 минут для уточнения деталей и подтверждения заказа</span>
+              <DetailsP className={`mt-2.5 md:mt-5 ${details1InView ? 'delay-100 translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>Your order number – {395808599}</DetailsP>
+              <DetailsP className={`mt-2 md:mt-5 ${details1InView ? 'delay-200 translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>Thanks for your order!<br />
+                <span className={`hidden md:block`}>You will receive a notification about the status of your order.</span>
+                <span className={`md:hidden`}>Our manager will contact you within 15 minutes to clarify details and confirm the order.</span>
               </DetailsP>
-              <DetailsLink to='/' className={`mt-5 md:mt-[3.75rem] text-teal ${details1InView ? 'delay-300 translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>на главную</DetailsLink>
+              <DetailsLink to='/' className={`mt-5 md:mt-[3.75rem] text-teal ${details1InView ? 'delay-300 translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>go home</DetailsLink>
               <Sign className="text-pink-300 absolute z-10 translate-y-1/2 -bottom-2/3 left-[10%] lg:-bottom-4 lg:left-60" />
             </Details>
           </Container>
@@ -91,16 +87,16 @@ const Summary = () => {
           <PaymentErrorBack ref={img2Ref} className={img2InView ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'} src={images.errorBack} />
           <Container>
             <SectionTitleCustom className="mt-[10vh] sm:mt-[15vh] lg:mt-12  ">
-              Ошибка
-              <span className="block ml-12 md:ml-[1.5em] lg:ml-[2em]">платежа</span>
+              Payment
+              <span className="block ml-12 md:ml-[1.5em] lg:ml-[2em]">error</span>
             </SectionTitleCustom>
             <Details ref={details2Ref} className="relative ml-12 md:ml-[9.375em] lg:ml-[12.5em] w-3/4 md:w-2/3">
-              <DetailsP className={`mt-5 mb-2.5 md:my-5 ${details2InView ? 'delay-100 translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>Произошла ошибка....</DetailsP>
-              <DetailsP className={details2InView ? 'delay-100 translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}>Попробуйте оплатить еще раз!</DetailsP>
+              <DetailsP className={`mt-5 mb-2.5 md:my-5 ${details2InView ? 'delay-100 translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>An error has occurred....</DetailsP>
+              <DetailsP className={details2InView ? 'delay-100 translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}>Try paying again!</DetailsP>
               {/* buttons */}
               <div className="flex flex-col items-start gap-5 mt-8 lg:gap-12 md:mt-4 lg:flex-row lg:items-center">
-                <PinkButton className={details2InView ? 'delay-200 translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}>Оплатить еще раз</PinkButton>
-                <DetailsLink to='/' className={`text-pink-300 ${details2InView ? 'delay-[.25s] translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>Вернуться на главную</DetailsLink>
+                <PinkButton className={details2InView ? 'delay-200 translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}>try again</PinkButton>
+                <DetailsLink to='/' className={`text-pink-300 ${details2InView ? 'delay-[.25s] translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>go home</DetailsLink>
               </div>
             </Details>
           </Container>
@@ -120,9 +116,9 @@ const Summary = () => {
           </Error404Back>
           <Error404Back2 className={img3InView ? 'delay-150 translate-x-0 opacity-100' : 'translate-x-10 opacity-0'} src={images.err404Back} />
           <Details ref={details3Ref} className="absolute translate-x-1/3 bottom-8 sm:bottom-16 md:bottom-24 right-1/3">
-            <DetailsP className={details3InView ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}>Ошибка 404</DetailsP>
-            <DetailsP className={`my-5 ${details3InView ? 'delay-100 translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>Упс...Такой страницы нет</DetailsP>
-            <DetailsLink to='/' className={`text-blue-400 ${details3InView ? 'delay-200 translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>на главную</DetailsLink>
+            <DetailsP className={details3InView ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}>Error 404</DetailsP>
+            <DetailsP className={`my-5 ${details3InView ? 'delay-100 translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>Oops...No such page found</DetailsP>
+            <DetailsLink to='/' className={`text-blue-400 ${details3InView ? 'delay-200 translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>go home</DetailsLink>
           </Details>
           <Sign className="text-blue-800 absolute right-0 sm:right-8 md:right-[10%] lg:right-1/4 xl:right-1/5 lg:translate-x-1/2 xl:translate-x-1/3 top-[65%] -translate-y-[65%] xl:top-[37.5%] rotate-[-14.17deg]" />
         </Main404>

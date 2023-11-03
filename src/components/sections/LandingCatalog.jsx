@@ -28,54 +28,54 @@ const LandingCatalog = () => {
       <Container>
         <SectionTitle className={`mb-5 lg:mb-0`}>
           <>
-            каталог
+            catalog
           </>
         </SectionTitle>
         <Flex>
           <div className="basis-[48.5%] shrink-0 grow-0 hidden md:block ml-8 xl:ml-20 mt-2.5 mb-20">
             <SectionText>
-              У нас самый большой выбор цветов, букетов, открыток и подарков.
-              Мы всегда поможем вам подобрать букет для вашего события, наш менеджер вас проконсультирует и поможет определиться с выбором
+              We have the largest selection of flowers, bouquets, cards and gifts.
+              We will always help you choose a bouquet for your event, our manager will advise you and help you make your choice
             </SectionText>
-            <SectionText className="mt-7">Ознакомьтесь с нашими разделами каталога</SectionText>
+            <SectionText className="mt-7">Check out our catalog sections</SectionText>
           </div>
           <CatalogCard ref={card1Ref} className={`w-full md:basis-[40%] lg:min-w-[40%] ${card1InView ? 'translate-x-0 opacity-100' : 'translate-x-12 opacity-0'}`}>
-            <CardLayer className={`${card1InView ? '-top-24 -left-12' : '-top-24 left-[2.75em]'}`}>букеты</CardLayer>
+            <CardLayer className={`${card1InView ? '-top-24 -left-12' : '-top-24 left-[2.75em]'}`}>bouquets</CardLayer>
             <CardBg />
-            <CardTitle>готовые букеты из<span>&nbsp;</span>сухоцветов</CardTitle>
+            <CardTitle>bouquets of dried flowers</CardTitle>
             <CardList>
-              <ListItem className='mb-1.5 md:mb-1 last:mb-0'>букеты</ListItem>
-              <ListItem className='mb-1.5 md:mb-1 last:mb-0'>для интерьера</ListItem>
-              <ListItem className='mb-1.5 md:mb-1 last:mb-0'>Композиции</ListItem>
+              <ListItem className='mb-1.5 md:mb-1 last:mb-0'>bouquets</ListItem>
+              <ListItem className='mb-1.5 md:mb-1 last:mb-0'>for interior</ListItem>
+              <ListItem className='mb-1.5 md:mb-1 last:mb-0'>compositions</ListItem>
             </CardList>
-            <CardButton to='/catalog'>смотреть каталог</CardButton>
+            <CardButton to='/catalog'>view catalog</CardButton>
           </CatalogCard>
         </Flex>
         <Flex className="mt-10">
           <CatalogCard ref={card2Ref} className={`w-full md:basis-[48.5%] lg:min-w-[48.5%] md:-translate-y-20 ${card2InView ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'}`}>
             <CardBg />
-            <CardTitle>цветы</CardTitle>
+            <CardTitle>flowers</CardTitle>
             <CardList>
-              <CardLayer className={card2InView ? '-top-[5.5rem] right-12' : '-top-[5.5rem] right-[2.5em]'}>цветы</CardLayer>
-              <ListItem className='mb-1.5 md:mb-1 last:mb-0'>сборные букеты</ListItem>
-              <ListItem className='mb-1.5 md:mb-1 last:mb-0'>монобукеты</ListItem>
-              <ListItem className='mb-1.5 md:mb-1 last:mb-0'>Композиции из цветов</ListItem>
-              <ListItem className='mb-1.5 md:mb-1 last:mb-0'>розы</ListItem>
-              <ListItem className='mb-1.5 md:mb-1 last:mb-0'>свадебные</ListItem>
+              <CardLayer className={card2InView ? '-top-[5.5rem] right-12' : '-top-[5.5rem] right-[2.5em]'}>flowers</CardLayer>
+              <ListItem className='mb-1.5 md:mb-1 last:mb-0'>made bouquets</ListItem>
+              <ListItem className='mb-1.5 md:mb-1 last:mb-0'>mono bouquets</ListItem>
+              <ListItem className='mb-1.5 md:mb-1 last:mb-0'>flower compositions</ListItem>
+              <ListItem className='mb-1.5 md:mb-1 last:mb-0'>roses</ListItem>
+              <ListItem className='mb-1.5 md:mb-1 last:mb-0'>wedding</ListItem>
             </CardList>
-            <CardButton to='/catalog'>смотреть каталог</CardButton>
+            <CardButton to='/catalog'>view catalog</CardButton>
           </CatalogCard>
           <CatalogCard ref={card3Ref} className={`w-full md:basis-[48.5%] lg:min-w-[48.5%] ${card3InView ? 'translate-x-0 opacity-100' : 'translate-x-12 opacity-0'}`}>
-            <CardLayer className={card3InView ? 'top-12 -left-16' : 'top-12 left-[3.5em]'}>дополнительно</CardLayer>
+            <CardLayer className={card3InView ? 'top-12 -left-16' : 'top-12 left-[3.5em]'}>additional</CardLayer>
             <CardBg />
-            <CardTitle>дополнительно</CardTitle>
+            <CardTitle>additional</CardTitle>
             <CardList>
-              <ListItem className='mb-1.5 md:mb-1 last:mb-0'>шары</ListItem>
-              <ListItem className='mb-1.5 md:mb-1 last:mb-0'>игрушки</ListItem>
-              <ListItem className='mb-1.5 md:mb-1 last:mb-0'>открытки</ListItem>
-              <ListItem className='mb-1.5 md:mb-1 last:mb-0'>упаковка</ListItem>
+              <ListItem className='mb-1.5 md:mb-1 last:mb-0'>balloons</ListItem>
+              <ListItem className='mb-1.5 md:mb-1 last:mb-0'>toys</ListItem>
+              <ListItem className='mb-1.5 md:mb-1 last:mb-0'>postcards</ListItem>
+              <ListItem className='mb-1.5 md:mb-1 last:mb-0'>package</ListItem>
             </CardList>
-            <CardButton to='/catalog'>смотреть каталог</CardButton>
+            <CardButton to='/catalog'>view catalog</CardButton>
           </CatalogCard>
         </Flex>
       </Container>

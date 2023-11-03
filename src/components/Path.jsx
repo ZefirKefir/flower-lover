@@ -14,7 +14,7 @@ const Path = ({ path, pathName = 'path' }) => {
   return (
     <P ref={ref}>
       <Link to='/' className={`duration-500 block ease-in-out ${inView ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'}`}>
-        Главная</Link>
+        Home</Link>
       {pathList.map((item, index) => {
         {/* const delay = index * 150 + 150; */ }
         return (
