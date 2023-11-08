@@ -38,7 +38,10 @@ const ProductCard = ({ id, wide = false, style = {}, i = null }) => {
           document.body.classList.add('no-scrollbar');
         }} src={src} />
         {feature === '' ? <></> : <CardFeature className={feature === 'sale' ? 'bg-[#31985A]' : 'bg-pink-300'}>{feature}</CardFeature>}
-        <CardName onClick={() => dispatch(setProduct(id))} to={'/catalog/product'}>{name}</CardName>
+        <CardName onClick={() => {
+      dispatch(setProduct(id));
+      document.body.classList.remove('no-scrollbar');
+        }} to={'/catalog/product'}>{name}</CardName>
         <CardPrice>
           <SalePrice>
             {priceDisplayer(price, 1)}
