@@ -30,7 +30,7 @@ const ProductCard = ({ id, wide = false, style = {}, i = null }) => {
   return (
     <>
       <Modal state={modal} stateFunc={setModal}>
-        <img className="w-full h-full" src={src} />
+        <img className="object-cover w-full h-full" src={src} />
       </Modal>
       <Card ref={ref} style={inView ? style : { transitionDelay: '0ms' }} className={inView ? 'scale-100 opacity-100' : 'scale-90 opacity-0 delay-0'}>
         <CardImg onClick={() => {
